@@ -1,6 +1,16 @@
 // ============================================================
 // 音声再生（Web Speech API）
 // ============================================================
+// Safari対応: 音声一覧を事前にキャッシュ（非同期読み込み対策）
+var cachedVoices = [];
+function loadVoices() {
+    cachedVoices = window.speechSynthesis.getVoices();
+}
+if (window.speechSynthesis) {
+    loadVoices();
+    window.speechSynthesis.onvoiceschanged = loadVoices;
+}
+
 function speak(text, btn) {
     if (window.speechSynthesis.speaking) {
         window.speechSynthesis.cancel();
@@ -10,12 +20,24 @@ function speak(text, btn) {
     utterance.rate = 0.85;
     utterance.pitch = 1;
 
+    // Safari対応: 英語の音声を明示的に設定
+    var voices = cachedVoices.length ? cachedVoices : window.speechSynthesis.getVoices();
+    var enVoice = null;
+    for (var i = 0; i < voices.length; i++) {
+        if (voices[i].lang && voices[i].lang.indexOf('en') === 0) {
+            enVoice = voices[i];
+            if (voices[i].lang === 'en-US') break;
+        }
+    }
+    if (enVoice) utterance.voice = enVoice;
+
     if (btn) {
         btn.classList.add('playing');
         utterance.onend = function() { btn.classList.remove('playing'); };
         utterance.onerror = function() { btn.classList.remove('playing'); };
     }
 
+    // Safari対応: 長い音声が途中で止まるバグの回避
     window.speechSynthesis.speak(utterance);
 }
 
@@ -1490,21 +1512,7 @@ lessonContent[13] = `
     </div>
 </div>
 
-<div class="card">
-    <h2>練習問題</h2>
-    <div class="exercise">
-        <p>Q1. 「明日は晴れるだろう。」を英語に。（will を使って）</p>
-        <input type="text" id="ex13-1" placeholder="英語で入力">
-        <button onclick="checkExercise('ex13-1', ['It will be sunny tomorrow.', 'It will be sunny tomorrow'])">答え合わせ</button>
-        <div class="feedback" id="ex13-1-fb"></div>
-    </div>
-    <div class="exercise">
-        <p>Q2. 「私は来年日本に行く予定です。」を英語に。（be going to を使って）</p>
-        <input type="text" id="ex13-2" placeholder="英語で入力">
-        <button onclick="checkExercise('ex13-2', ['I am going to go to Japan next year.', 'I am going to visit Japan next year.', 'I\\'m going to go to Japan next year.'])">答え合わせ</button>
-        <div class="feedback" id="ex13-2-fb"></div>
-    </div>
-</div>
+<div class="card" id="exercises-13"></div>
 `;
 
 // ----- Lesson 14: 助動詞 -----
@@ -1569,21 +1577,7 @@ lessonContent[14] = `
     </div>
 </div>
 
-<div class="card">
-    <h2>練習問題</h2>
-    <div class="exercise">
-        <p>Q1. 「私はピアノを弾ける。」を英語に。</p>
-        <input type="text" id="ex14-1" placeholder="英語で入力">
-        <button onclick="checkExercise('ex14-1', ['I can play the piano.', 'I can play the piano', 'I can play piano.'])">答え合わせ</button>
-        <div class="feedback" id="ex14-1-fb"></div>
-    </div>
-    <div class="exercise">
-        <p>Q2. 「あなたはもっと寝るべきです。」を英語に。</p>
-        <input type="text" id="ex14-2" placeholder="英語で入力">
-        <button onclick="checkExercise('ex14-2', ['You should sleep more.', 'You should sleep more'])">答え合わせ</button>
-        <div class="feedback" id="ex14-2-fb"></div>
-    </div>
-</div>
+<div class="card" id="exercises-14"></div>
 `;
 
 // ----- Lesson 15: 疑問詞を使った疑問文 -----
@@ -1786,21 +1780,7 @@ lessonContent[17] = `
     </div>
 </div>
 
-<div class="card">
-    <h2>練習問題</h2>
-    <div class="exercise">
-        <p>Q1. 「私は英語を話すことが好きです。」を英語に。</p>
-        <input type="text" id="ex17-1" placeholder="英語で入力">
-        <button onclick="checkExercise('ex17-1', ['I like to speak English.', 'I like to speak English'])">答え合わせ</button>
-        <div class="feedback" id="ex17-1-fb"></div>
-    </div>
-    <div class="exercise">
-        <p>Q2. 「彼は友達に会うために東京に行った。」を英語に。</p>
-        <input type="text" id="ex17-2" placeholder="英語で入力">
-        <button onclick="checkExercise('ex17-2', ['He went to Tokyo to see his friend.', 'He went to Tokyo to meet his friend.', 'He went to Tokyo to see his friends.'])">答え合わせ</button>
-        <div class="feedback" id="ex17-2-fb"></div>
-    </div>
-</div>
+<div class="card" id="exercises-17"></div>
 `;
 
 // ----- Lesson 18: 動名詞と不定詞 -----
@@ -1843,21 +1823,7 @@ lessonContent[18] = `
     </div>
 </div>
 
-<div class="card">
-    <h2>練習問題</h2>
-    <div class="exercise">
-        <p>Q1. 「私は料理をすることを楽しむ。」を英語に。</p>
-        <input type="text" id="ex18-1" placeholder="英語で入力">
-        <button onclick="checkExercise('ex18-1', ['I enjoy cooking.', 'I enjoy cooking'])">答え合わせ</button>
-        <div class="feedback" id="ex18-1-fb"></div>
-    </div>
-    <div class="exercise">
-        <p>Q2. 「私は医者になりたい。」を英語に。</p>
-        <input type="text" id="ex18-2" placeholder="英語で入力">
-        <button onclick="checkExercise('ex18-2', ['I want to be a doctor.', 'I want to be a doctor', 'I want to become a doctor.'])">答え合わせ</button>
-        <div class="feedback" id="ex18-2-fb"></div>
-    </div>
-</div>
+<div class="card" id="exercises-18"></div>
 `;
 
 // ----- Lesson 19: 接続詞 -----
@@ -1898,21 +1864,7 @@ lessonContent[19] = `
     </div>
 </div>
 
-<div class="card">
-    <h2>練習問題</h2>
-    <div class="exercise">
-        <p>Q1. 「もし明日晴れたら、サッカーをしよう。」を英語に。</p>
-        <input type="text" id="ex19-1" placeholder="英語で入力">
-        <button onclick="checkExercise('ex19-1', ['If it is sunny tomorrow, let\\'s play soccer.', 'If it\\'s sunny tomorrow, let\\'s play soccer.', 'If it is fine tomorrow, let\\'s play soccer.'])">答え合わせ</button>
-        <div class="feedback" id="ex19-1-fb"></div>
-    </div>
-    <div class="exercise">
-        <p>Q2. 「私は彼が優しいと思う。」を英語に。</p>
-        <input type="text" id="ex19-2" placeholder="英語で入力">
-        <button onclick="checkExercise('ex19-2', ['I think that he is kind.', 'I think that he is kind', 'I think he is kind.', 'I think he is kind'])">答え合わせ</button>
-        <div class="feedback" id="ex19-2-fb"></div>
-    </div>
-</div>
+<div class="card" id="exercises-19"></div>
 `;
 
 // ----- Lesson 20: 比較級と最上級 -----
@@ -1963,21 +1915,7 @@ lessonContent[20] = `
     </table>
 </div>
 
-<div class="card">
-    <h2>練習問題</h2>
-    <div class="exercise">
-        <p>Q1. 「私は彼より年上です。」を英語に。</p>
-        <input type="text" id="ex20-1" placeholder="英語で入力">
-        <button onclick="checkExercise('ex20-1', ['I am older than him.', 'I am older than him', 'I am older than he is.'])">答え合わせ</button>
-        <div class="feedback" id="ex20-1-fb"></div>
-    </div>
-    <div class="exercise">
-        <p>Q2. good の比較級は？</p>
-        <input type="text" id="ex20-2" placeholder="比較級を入力">
-        <button onclick="checkExercise('ex20-2', ['better'])">答え合わせ</button>
-        <div class="feedback" id="ex20-2-fb"></div>
-    </div>
-</div>
+<div class="card" id="exercises-20"></div>
 `;
 
 // ----- Lesson 21: 比較のいろいろ -----
@@ -2010,21 +1948,7 @@ lessonContent[21] = `
     </table>
 </div>
 
-<div class="card">
-    <h2>練習問題</h2>
-    <div class="exercise">
-        <p>Q1. 「私はあなたと同じくらい背が高い。」を英語に。</p>
-        <input type="text" id="ex21-1" placeholder="英語で入力">
-        <button onclick="checkExercise('ex21-1', ['I am as tall as you.', 'I am as tall as you'])">答え合わせ</button>
-        <div class="feedback" id="ex21-1-fb"></div>
-    </div>
-    <div class="exercise">
-        <p>Q2. 「私は全ての教科の中で数学が一番好きです。」を英語に。</p>
-        <input type="text" id="ex21-2" placeholder="英語で入力">
-        <button onclick="checkExercise('ex21-2', ['I like math the best of all subjects.', 'I like math the best of all subjects'])">答え合わせ</button>
-        <div class="feedback" id="ex21-2-fb"></div>
-    </div>
-</div>
+<div class="card" id="exercises-21"></div>
 `;
 
 // ----- Lesson 22: 受け身の表現 -----
@@ -2074,21 +1998,7 @@ lessonContent[22] = `
     </div>
 </div>
 
-<div class="card">
-    <h2>練習問題</h2>
-    <div class="exercise">
-        <p>Q1. 「この本は多くの人に読まれている。」を英語に。</p>
-        <input type="text" id="ex22-1" placeholder="英語で入力">
-        <button onclick="checkExercise('ex22-1', ['This book is read by many people.', 'This book is read by many people'])">答え合わせ</button>
-        <div class="feedback" id="ex22-1-fb"></div>
-    </div>
-    <div class="exercise">
-        <p>Q2. 受動態にしましょう。「She made this cake.」→ This cake ___.</p>
-        <input type="text" id="ex22-2" placeholder="英語で入力">
-        <button onclick="checkExercise('ex22-2', ['was made by her', 'was made by her.', 'This cake was made by her.', 'This cake was made by her'])">答え合わせ</button>
-        <div class="feedback" id="ex22-2-fb"></div>
-    </div>
-</div>
+<div class="card" id="exercises-22"></div>
 `;
 
 // ----- Lesson 23: 重要表現いろいろ -----
@@ -2151,21 +2061,7 @@ lessonContent[23] = `
     </div>
 </div>
 
-<div class="card">
-    <h2>練習問題</h2>
-    <div class="exercise">
-        <p>Q1. 「部屋に犬が2匹います。」を英語に。</p>
-        <input type="text" id="ex23-1" placeholder="英語で入力">
-        <button onclick="checkExercise('ex23-1', ['There are two dogs in the room.', 'There are two dogs in the room'])">答え合わせ</button>
-        <div class="feedback" id="ex23-1-fb"></div>
-    </div>
-    <div class="exercise">
-        <p>Q2. 「英語を話すことは楽しい。」を It is ... to ~ で英語に。</p>
-        <input type="text" id="ex23-2" placeholder="英語で入力">
-        <button onclick="checkExercise('ex23-2', ['It is fun to speak English.', 'It is fun to speak English'])">答え合わせ</button>
-        <div class="feedback" id="ex23-2-fb"></div>
-    </div>
-</div>
+<div class="card" id="exercises-23"></div>
 `;
 
 // ----- Lesson 24: 現在完了形その1 完了と結果 -----
@@ -2222,21 +2118,7 @@ lessonContent[24] = `
     </div>
 </div>
 
-<div class="card">
-    <h2>練習問題</h2>
-    <div class="exercise">
-        <p>Q1. 「私はもう宿題を終えました。」を英語に。</p>
-        <input type="text" id="ex24-1" placeholder="英語で入力">
-        <button onclick="checkExercise('ex24-1', ['I have already finished my homework.', 'I have already finished my homework'])">答え合わせ</button>
-        <div class="feedback" id="ex24-1-fb"></div>
-    </div>
-    <div class="exercise">
-        <p>Q2. 「彼はちょうど到着したところです。」を英語に。</p>
-        <input type="text" id="ex24-2" placeholder="英語で入力">
-        <button onclick="checkExercise('ex24-2', ['He has just arrived.', 'He has just arrived'])">答え合わせ</button>
-        <div class="feedback" id="ex24-2-fb"></div>
-    </div>
-</div>
+<div class="card" id="exercises-24"></div>
 `;
 
 // ----- Lesson 25: 現在完了形その2 継続と経験 -----
@@ -2285,21 +2167,7 @@ lessonContent[25] = `
     </table>
 </div>
 
-<div class="card">
-    <h2>練習問題</h2>
-    <div class="exercise">
-        <p>Q1. 「私は5年間英語を勉強しています。」を英語に。</p>
-        <input type="text" id="ex25-1" placeholder="英語で入力">
-        <button onclick="checkExercise('ex25-1', ['I have studied English for five years.', 'I have studied English for five years', 'I have studied English for 5 years.'])">答え合わせ</button>
-        <div class="feedback" id="ex25-1-fb"></div>
-    </div>
-    <div class="exercise">
-        <p>Q2. 「あなたは今までに富士山に登ったことがありますか？」を英語に。</p>
-        <input type="text" id="ex25-2" placeholder="英語で入力">
-        <button onclick="checkExercise('ex25-2', ['Have you ever climbed Mt. Fuji?', 'Have you ever climbed Mt. Fuji', 'Have you ever climbed Mount Fuji?'])">答え合わせ</button>
-        <div class="feedback" id="ex25-2-fb"></div>
-    </div>
-</div>
+<div class="card" id="exercises-25"></div>
 `;
 
 // ----- Lesson 26: 現在分詞と過去分詞 -----
@@ -2351,21 +2219,7 @@ lessonContent[26] = `
     </div>
 </div>
 
-<div class="card">
-    <h2>練習問題</h2>
-    <div class="exercise">
-        <p>Q1. 「あれは壊れた窓です。」を英語に。</p>
-        <input type="text" id="ex26-1" placeholder="英語で入力">
-        <button onclick="checkExercise('ex26-1', ['That is a broken window.', 'That is a broken window'])">答え合わせ</button>
-        <div class="feedback" id="ex26-1-fb"></div>
-    </div>
-    <div class="exercise">
-        <p>Q2. 「私はその映画に興味がある。」← interested / interesting どっち？</p>
-        <input type="text" id="ex26-2" placeholder="interested / interesting">
-        <button onclick="checkExercise('ex26-2', ['interested'])">答え合わせ</button>
-        <div class="feedback" id="ex26-2-fb"></div>
-    </div>
-</div>
+<div class="card" id="exercises-26"></div>
 `;
 
 // ----- Lesson 27: 関係代名詞その1 主格と目的格 -----
@@ -2419,21 +2273,7 @@ lessonContent[27] = `
     </div>
 </div>
 
-<div class="card">
-    <h2>練習問題</h2>
-    <div class="exercise">
-        <p>Q1. 「英語を話す女の子を知っていますか？」を英語に。</p>
-        <input type="text" id="ex27-1" placeholder="英語で入力">
-        <button onclick="checkExercise('ex27-1', ['Do you know the girl who speaks English?', 'Do you know a girl who speaks English?'])">答え合わせ</button>
-        <div class="feedback" id="ex27-1-fb"></div>
-    </div>
-    <div class="exercise">
-        <p>Q2. 2つの文を関係代名詞でつなぎましょう。「I have a dog. It is very cute.」</p>
-        <input type="text" id="ex27-2" placeholder="英語で入力">
-        <button onclick="checkExercise('ex27-2', ['I have a dog which is very cute.', 'I have a dog that is very cute.'])">答え合わせ</button>
-        <div class="feedback" id="ex27-2-fb"></div>
-    </div>
-</div>
+<div class="card" id="exercises-27"></div>
 `;
 
 // ----- Lesson 28: 関係代名詞その2 所有格 -----
@@ -2472,15 +2312,7 @@ lessonContent[28] = `
     </table>
 </div>
 
-<div class="card">
-    <h2>練習問題</h2>
-    <div class="exercise">
-        <p>Q1. 「私はお母さんが先生である女の子を知っている。」を英語に。</p>
-        <input type="text" id="ex28-1" placeholder="英語で入力">
-        <button onclick="checkExercise('ex28-1', ['I know the girl whose mother is a teacher.', 'I know a girl whose mother is a teacher.'])">答え合わせ</button>
-        <div class="feedback" id="ex28-1-fb"></div>
-    </div>
-</div>
+<div class="card" id="exercises-28"></div>
 `;
 
 // ----- Lesson 29: 英文解釈のコツ -----
@@ -2543,6 +2375,8 @@ lessonContent[29] = `
         </div>
     </div>
 </div>
+
+<div class="card" id="exercises-29"></div>
 
 <div class="card">
     <h2>全レッスン完了！</h2>
@@ -2722,6 +2556,12 @@ function showLesson(key) {
         if (oc && oc.indexOf(key) !== -1) b.classList.add('active');
     });
 
+    // ランダム練習問題の挿入
+    if (key.startsWith('lesson-')) {
+        var lessonId = parseInt(key.split('-')[1]);
+        injectRandomExercises(lessonId);
+    }
+
     // 音声ボタン自動挿入
     addSpeakButtons();
 
@@ -2789,10 +2629,10 @@ function addSpeakButtons() {
         });
     });
 
-    // 3. comparison-box の英語部分
-    content.querySelectorAll('.en-order p strong, .en-order p').forEach(function(el) {
+    // 3. comparison-box の英語部分（en-order と jp-order 両方）
+    content.querySelectorAll('.en-order p strong, .en-order p, .jp-order p strong, .jp-order p').forEach(function(el) {
         if (el.querySelector('.speak-btn')) return;
-        if (el.tagName === 'P' && el.querySelector('strong')) return; // strong がある p はスキップ
+        if (el.tagName === 'P' && el.querySelector('strong')) return;
         var text = el.textContent.trim();
         if (/^[A-Z].*[.!?]$/.test(text) && text.length > 3) {
             var btn = document.createElement('button');
@@ -2801,6 +2641,48 @@ function addSpeakButtons() {
             btn.title = '発音を聞く';
             btn.onclick = function() { speak(text, btn); };
             el.appendChild(btn);
+        }
+    });
+
+    // 4. warn-box 内の英文（正誤比較文）
+    content.querySelectorAll('.warn-box').forEach(function(box) {
+        if (box.querySelector('.speak-btn')) return;
+        var html = box.innerHTML;
+        var lines = html.split(/<br\s*\/?>/i);
+        var newHtml = '';
+        lines.forEach(function(line) {
+            var tmp = document.createElement('div');
+            tmp.innerHTML = line;
+            var text = tmp.textContent.trim();
+            // ○ or ✕ で始まる英文行を検出
+            var enMatch = text.match(/[○✕×]\s*(.+)/);
+            if (enMatch) {
+                var enText = enMatch[1].replace(/\s+/g, ' ').trim();
+                if (/[a-zA-Z]{2,}/.test(enText)) {
+                    newHtml += line + ' <button class="speak-btn" onclick="speak(\'' + enText.replace(/'/g, "\\'") + '\', this)" title="発音を聞く">&#128264;</button><br>';
+                    return;
+                }
+            }
+            newHtml += line + '<br>';
+        });
+        box.innerHTML = newHtml.replace(/<br>$/, '');
+    });
+
+    // 5. point-box 内の英文
+    content.querySelectorAll('.point-box').forEach(function(box) {
+        if (box.querySelector('.speak-btn')) return;
+        var text = box.textContent;
+        // 英文（大文字始まりでピリオド等で終わる）を含む場合のみ
+        var matches = text.match(/[A-Z][a-zA-Z\s',]+[.!?]/g);
+        if (matches) {
+            matches.forEach(function(enText) {
+                enText = enText.trim();
+                if (enText.length > 5 && /[a-z]/.test(enText)) {
+                    var escaped = enText.replace(/'/g, "\\'");
+                    var btnHtml = '<button class="speak-btn" onclick="speak(\'' + escaped + '\', this)" title="発音を聞く">&#128264;</button>';
+                    box.innerHTML = box.innerHTML.replace(enText, enText + ' ' + btnHtml);
+                }
+            });
         }
     });
 }
@@ -2856,6 +2738,172 @@ function addSpeakButtonsToRef() {
 }
 
 // ============================================================
+// 練習問題バンク（ランダム出題）
+// ============================================================
+function shuffleArray(arr) {
+    var a = arr.slice();
+    for (var i = a.length - 1; i > 0; i--) {
+        var j = Math.floor(Math.random() * (i + 1));
+        var tmp = a[i]; a[i] = a[j]; a[j] = tmp;
+    }
+    return a;
+}
+
+function generateExercises(lessonId, count) {
+    var bank = exerciseBank[lessonId];
+    if (!bank || bank.length === 0) return '';
+    var selected = shuffleArray(bank).slice(0, count || 3);
+    var html = '<h2>練習問題</h2><p>次の日本語を英語にしてみましょう。（ページを更新すると問題が変わります）</p>';
+    selected.forEach(function(ex, idx) {
+        var qNum = idx + 1;
+        var exId = 'exr-' + lessonId + '-' + qNum;
+        html += '<div class="exercise">';
+        html += '<p>Q' + qNum + '. ' + ex.q + '</p>';
+        html += '<input type="text" id="' + exId + '" placeholder="英語で入力">';
+        html += ' <button onclick="checkExercise(\'' + exId + '\', JSON.parse(this.dataset.ans))" data-ans=\'' + JSON.stringify(ex.answers).replace(/'/g, '&#x27;') + '\'>答え合わせ</button>';
+        html += '<div class="feedback" id="' + exId + '-fb"></div>';
+        html += '</div>';
+    });
+    return html;
+}
+
+function injectRandomExercises(lessonId) {
+    var el = document.getElementById('exercises-' + lessonId);
+    if (!el || !exerciseBank[lessonId]) return;
+    el.innerHTML = generateExercises(lessonId, 3);
+}
+
+var exerciseBank = {
+    13: [
+        { q: '「明日は晴れるだろう。」を英語に。（will を使って）', answers: ['It will be sunny tomorrow.', 'It will be sunny tomorrow'] },
+        { q: '「私は来年日本に行く予定です。」を英語に。（be going to を使って）', answers: ['I am going to go to Japan next year.', 'I am going to visit Japan next year.', "I'm going to go to Japan next year."] },
+        { q: '「彼女はパーティーに来るでしょう。」を英語に。（will を使って）', answers: ['She will come to the party.', 'She will come to the party'] },
+        { q: '「私たちは明日サッカーをする予定です。」を英語に。（be going to を使って）', answers: ['We are going to play soccer tomorrow.', "We're going to play soccer tomorrow."] },
+        { q: '「彼は将来先生になるだろう。」を英語に。（will を使って）', answers: ['He will be a teacher in the future.', 'He will become a teacher in the future.', 'He will be a teacher.'] },
+        { q: '「彼らは京都を訪れる予定です。」を英語に。（be going to を使って）', answers: ['They are going to visit Kyoto.', "They're going to visit Kyoto."] },
+        { q: '「明日雨が降るだろう。」を英語に。（will を使って）', answers: ['It will rain tomorrow.', 'It will rain tomorrow'] },
+        { q: '「私は今夜料理をする予定です。」を英語に。（be going to を使って）', answers: ['I am going to cook tonight.', "I'm going to cook tonight."] }
+    ],
+    14: [
+        { q: '「私はピアノを弾ける。」を英語に。', answers: ['I can play the piano.', 'I can play the piano', 'I can play piano.'] },
+        { q: '「あなたはもっと寝るべきです。」を英語に。', answers: ['You should sleep more.', 'You should sleep more'] },
+        { q: '「私はここで泳いでもいいですか？」を英語に。', answers: ['May I swim here?', 'Can I swim here?'] },
+        { q: '「あなたは宿題をしなければならない。」を英語に。', answers: ['You must do your homework.', 'You have to do your homework.'] },
+        { q: '「彼女は英語を話すことができる。」を英語に。', answers: ['She can speak English.', 'She can speak English'] },
+        { q: '「窓を開けてもいいですか？」を英語に。', answers: ['May I open the window?', 'Can I open the window?'] },
+        { q: '「あなたはもっと水を飲むべきです。」を英語に。', answers: ['You should drink more water.', 'You should drink more water'] }
+    ],
+    17: [
+        { q: '「私は英語を話すことが好きです。」を英語に。', answers: ['I like to speak English.', 'I like to speak English'] },
+        { q: '「彼は友達に会うために東京に行った。」を英語に。', answers: ['He went to Tokyo to see his friend.', 'He went to Tokyo to meet his friend.'] },
+        { q: '「何か飲むものがほしい。」を英語に。', answers: ['I want something to drink.', 'I want something to drink'] },
+        { q: '「彼女はケーキを作ることが好きです。」を英語に。', answers: ['She likes to make cakes.', 'She likes to bake cakes.', 'She likes to make a cake.'] },
+        { q: '「私は本を読むために図書館に行った。」を英語に。', answers: ['I went to the library to read books.', 'I went to the library to read a book.'] },
+        { q: '「彼は医者になりたい。」を英語に。', answers: ['He wants to be a doctor.', 'He wants to become a doctor.'] },
+        { q: '「何か食べるものはありますか？」を英語に。', answers: ['Is there something to eat?', 'Do you have something to eat?'] }
+    ],
+    18: [
+        { q: '「私は料理をすることを楽しむ。」を英語に。', answers: ['I enjoy cooking.', 'I enjoy cooking'] },
+        { q: '「私は医者になりたい。」を英語に。', answers: ['I want to be a doctor.', 'I want to be a doctor', 'I want to become a doctor.'] },
+        { q: '「彼は走ることをやめた。」を英語に。', answers: ['He stopped running.', 'He stopped running'] },
+        { q: '「雨が降り始めた。」を英語に。', answers: ['It started raining.', 'It started to rain.', 'It began raining.', 'It began to rain.'] },
+        { q: '「私は音楽を聞くことが好きです。」を英語に。（enjoy を使って）', answers: ['I enjoy listening to music.', 'I enjoy listening to music'] },
+        { q: '「彼女はピアノを弾くことを練習した。」を英語に。', answers: ['She practiced playing the piano.', 'She practiced playing piano.'] },
+        { q: '「私は泳ぐのが終わった。」を英語に。', answers: ['I finished swimming.', 'I finished swimming'] }
+    ],
+    19: [
+        { q: '「もし明日晴れたら、サッカーをしよう。」を英語に。', answers: ["If it is sunny tomorrow, let's play soccer.", "If it's sunny tomorrow, let's play soccer."] },
+        { q: '「私は彼が優しいと思う。」を英語に。', answers: ['I think that he is kind.', 'I think he is kind.', 'I think that he is kind'] },
+        { q: '「私が家に着いたとき、雨が降っていた。」を英語に。', answers: ['When I got home, it was raining.', 'It was raining when I got home.'] },
+        { q: '「彼女は疲れていたので、早く寝た。」を英語に。', answers: ['She went to bed early because she was tired.', 'Because she was tired, she went to bed early.'] },
+        { q: '「もし時間があれば、映画を見よう。」を英語に。', answers: ["If you have time, let's watch a movie.", "If we have time, let's watch a movie."] },
+        { q: '「私は彼が正しいと知っている。」を英語に。', answers: ['I know that he is right.', 'I know he is right.'] },
+        { q: '「彼はお腹が空いていたが、何も食べなかった。」を英語に。', answers: ['He was hungry, but he did not eat anything.', "He was hungry, but he didn't eat anything."] }
+    ],
+    20: [
+        { q: '「私は彼より年上です。」を英語に。', answers: ['I am older than him.', 'I am older than him', 'I am older than he is.'] },
+        { q: '「good の比較級は？」', answers: ['better'] },
+        { q: '「この本はあの本より面白い。」を英語に。', answers: ['This book is more interesting than that book.', 'This book is more interesting than that one.'] },
+        { q: '「彼女はクラスで一番背が高い。」を英語に。', answers: ['She is the tallest in the class.', 'She is the tallest in her class.'] },
+        { q: '「bad の最上級は？」', answers: ['worst'] },
+        { q: '「東京は大阪より大きい。」を英語に。', answers: ['Tokyo is bigger than Osaka.', 'Tokyo is larger than Osaka.'] },
+        { q: '「富士山は日本で一番高い山です。」を英語に。', answers: ['Mt. Fuji is the highest mountain in Japan.', 'Mount Fuji is the highest mountain in Japan.', 'Mt. Fuji is the tallest mountain in Japan.'] }
+    ],
+    21: [
+        { q: '「私のカバンはあなたのと同じくらい大きい。」を英語に。', answers: ['My bag is as big as yours.', 'My bag is as large as yours.'] },
+        { q: '「彼は兄ほど背が高くない。」を英語に。', answers: ['He is not as tall as his brother.', "He isn't as tall as his brother."] },
+        { q: '「どちらが好きですか、犬と猫では？」を英語に。', answers: ['Which do you like better, dogs or cats?', 'Which do you like more, dogs or cats?'] },
+        { q: '「数学は英語よりずっと難しい。」を英語に。', answers: ['Math is much harder than English.', 'Math is much more difficult than English.'] },
+        { q: '「彼女は私と同じくらい速く走れる。」を英語に。', answers: ['She can run as fast as me.', 'She can run as fast as I can.'] },
+        { q: '「3つの中でどれが一番好きですか？」を英語に。', answers: ['Which do you like the best of the three?', 'Which do you like best of the three?'] }
+    ],
+    22: [
+        { q: '「この本は多くの人に読まれている。」を英語に。', answers: ['This book is read by many people.', 'This book is read by many people'] },
+        { q: '「英語は世界中で話されている。」を英語に。', answers: ['English is spoken all over the world.', 'English is spoken around the world.'] },
+        { q: '「この歌は彼女によって歌われた。」を英語に。', answers: ['This song was sung by her.', 'This song was sung by her'] },
+        { q: '「その手紙は昨日書かれた。」を英語に。', answers: ['The letter was written yesterday.', 'That letter was written yesterday.'] },
+        { q: '「この車は日本で作られた。」を英語に。', answers: ['This car was made in Japan.', 'This car was made in Japan'] },
+        { q: '「フランス語はカナダで話されている。」を英語に。', answers: ['French is spoken in Canada.', 'French is spoken in Canada'] }
+    ],
+    23: [
+        { q: '「彼にまた会えることを楽しみにしています。」を英語に。', answers: ['I am looking forward to seeing him again.', "I'm looking forward to seeing him again."] },
+        { q: '「あなたの意見に賛成です。」を英語に。', answers: ['I agree with you.', 'I agree with your opinion.'] },
+        { q: '「彼女は犬の世話をしている。」を英語に。', answers: ['She takes care of the dog.', 'She takes care of her dog.', 'She is taking care of the dog.'] },
+        { q: '「私たちはその知らせに驚いた。」を英語に。', answers: ['We were surprised at the news.', 'We were surprised by the news.'] },
+        { q: '「彼は数学が得意です。」を英語に。', answers: ['He is good at math.', 'He is good at mathematics.'] },
+        { q: '「私はその映画に興味がある。」を英語に。', answers: ['I am interested in the movie.', "I'm interested in that movie.", 'I am interested in that movie.'] }
+    ],
+    24: [
+        { q: '「私はちょうど宿題を終えたところです。」を英語に。', answers: ['I have just finished my homework.', "I've just finished my homework."] },
+        { q: '「彼はもうその本を読んでしまった。」を英語に。', answers: ['He has already read the book.', 'He has already read that book.'] },
+        { q: '「あなたはもう昼食を食べましたか？」を英語に。', answers: ['Have you eaten lunch yet?', 'Have you had lunch yet?'] },
+        { q: '「私はまだ宿題を終えていない。」を英語に。', answers: ['I have not finished my homework yet.', "I haven't finished my homework yet."] },
+        { q: '「電車はもう出発してしまった。」を英語に。', answers: ['The train has already left.', 'The train has already departed.'] },
+        { q: '「彼女はちょうど家に帰ってきたところです。」を英語に。', answers: ['She has just come home.', 'She has just gotten home.', "She's just come home."] }
+    ],
+    25: [
+        { q: '「私は3年間日本に住んでいる。」を英語に。', answers: ['I have lived in Japan for three years.', "I've lived in Japan for three years.", 'I have lived in Japan for 3 years.'] },
+        { q: '「彼女は2回パリに行ったことがある。」を英語に。', answers: ['She has been to Paris twice.', 'She has visited Paris twice.'] },
+        { q: '「あなたは今までに寿司を食べたことがありますか？」を英語に。', answers: ['Have you ever eaten sushi?', 'Have you ever had sushi?', 'Have you ever tried sushi?'] },
+        { q: '「私は一度もスキーをしたことがない。」を英語に。', answers: ['I have never skied.', 'I have never been skiing.'] },
+        { q: '「彼は子供の頃からここに住んでいる。」を英語に。', answers: ['He has lived here since he was a child.', "He's lived here since he was a child.", 'He has lived here since childhood.'] },
+        { q: '「あなたはどのくらい英語を勉強していますか？」を英語に。', answers: ['How long have you studied English?', 'How long have you been studying English?'] }
+    ],
+    26: [
+        { q: '「走っている少年は私の弟です。」を英語に。', answers: ['The running boy is my brother.', 'The boy running is my brother.', 'The boy who is running is my brother.'] },
+        { q: '「壊れた窓を見てください。」を英語に。', answers: ['Look at the broken window.', 'Please look at the broken window.'] },
+        { q: '「あそこで歌っている女の子を知っていますか？」を英語に。', answers: ['Do you know the girl singing over there?', 'Do you know the girl who is singing over there?'] },
+        { q: '「これは日本で作られたカメラです。」を英語に。', answers: ['This is a camera made in Japan.', 'This is a camera which was made in Japan.'] },
+        { q: '「泳いでいる犬はかわいい。」を英語に。', answers: ['The swimming dog is cute.', 'The dog swimming is cute.', 'The dog that is swimming is cute.'] },
+        { q: '「英語で書かれた本を読みたい。」を英語に。', answers: ['I want to read a book written in English.', 'I want to read books written in English.'] }
+    ],
+    27: [
+        { q: '「私にはロンドンに住んでいる友達がいる。」を英語に。', answers: ['I have a friend who lives in London.', 'I have a friend that lives in London.'] },
+        { q: '「これは彼が書いた本です。」を英語に。', answers: ['This is the book which he wrote.', 'This is the book that he wrote.', 'This is the book he wrote.'] },
+        { q: '「ピアノを弾いている女の子は私の姉です。」を英語に。', answers: ['The girl who is playing the piano is my sister.', 'The girl that is playing the piano is my sister.'] },
+        { q: '「私が昨日買ったカバンは赤い。」を英語に。', answers: ['The bag which I bought yesterday is red.', 'The bag that I bought yesterday is red.', 'The bag I bought yesterday is red.'] },
+        { q: '「英語を話す人はたくさんいる。」を英語に。', answers: ['There are many people who speak English.', 'There are many people that speak English.'] },
+        { q: '「私が昨日会った男の人は先生です。」を英語に。', answers: ['The man who I met yesterday is a teacher.', 'The man that I met yesterday is a teacher.', 'The man I met yesterday is a teacher.'] }
+    ],
+    28: [
+        { q: '「お父さんが医者である女の子を知っています。」を英語に。', answers: ['I know the girl whose father is a doctor.', 'I know a girl whose father is a doctor.'] },
+        { q: '「屋根が赤い家は私のです。」を英語に。', answers: ['The house whose roof is red is mine.', 'The house the roof of which is red is mine.'] },
+        { q: '「お母さんが先生である男の子はトムです。」を英語に。', answers: ['The boy whose mother is a teacher is Tom.'] },
+        { q: '「私には名前が有名な友達がいる。」を英語に。', answers: ['I have a friend whose name is famous.'] },
+        { q: '「窓が壊れている家を見た。」を英語に。', answers: ['I saw a house whose window was broken.', 'I saw the house whose window was broken.'] },
+        { q: '「著者が日本人であるその本は面白い。」を英語に。', answers: ['The book whose author is Japanese is interesting.'] }
+    ],
+    29: [
+        { q: '「私は彼女がどこに住んでいるか知っている。」を英語に。', answers: ['I know where she lives.', 'I know where she lives'] },
+        { q: '「彼が何を言ったか教えてください。」を英語に。', answers: ['Please tell me what he said.', 'Tell me what he said.'] },
+        { q: '「あなたはいつ日本に来たか覚えていますか？」を英語に。', answers: ['Do you remember when you came to Japan?'] },
+        { q: '「It is important to study hard. を日本語に訳してください。」', answers: ['一生懸命勉強することは大切です。', '一生懸命勉強することは重要です。', '熱心に勉強することは大切です。'] },
+        { q: '「彼がなぜ怒っているのかわからない。」を英語に。', answers: ["I don't know why he is angry.", 'I do not know why he is angry.'] },
+        { q: '「あの建物がいつ建てられたか知っていますか？」を英語に。', answers: ['Do you know when that building was built?'] }
+    ]
+};
+
+// ============================================================
 // 練習問題チェック
 // ============================================================
 function checkExercise(inputId, answers) {
@@ -2884,6 +2932,44 @@ function checkExercise(inputId, answers) {
 var SpeechRecognition = window.SpeechRecognition || window.webkitSpeechRecognition;
 var pronunRecognition = null;
 var convRecognition = null;
+var micPermissionGranted = false;
+
+// Safari対応: SpeechRecognition開始前にマイク権限を事前取得する
+function ensureMicPermission() {
+    return new Promise(function(resolve, reject) {
+        if (micPermissionGranted) { resolve(); return; }
+        if (!navigator.mediaDevices || !navigator.mediaDevices.getUserMedia) {
+            resolve(); // getUserMedia非対応でも認識を試みる
+            return;
+        }
+        navigator.mediaDevices.getUserMedia({ audio: true })
+            .then(function(stream) {
+                // 権限取得成功、ストリームを停止
+                stream.getTracks().forEach(function(track) { track.stop(); });
+                micPermissionGranted = true;
+                resolve();
+            })
+            .catch(function(err) {
+                reject(err);
+            });
+    });
+}
+
+// Safari対応: SpeechRecognitionインスタンスを安全に開始する
+function startRecognitionSafely(recognition, resultDiv, statusEl) {
+    try {
+        recognition.start();
+    } catch (e) {
+        // Safari: 既に開始している場合などのエラーをキャッチ
+        if (statusEl) statusEl.textContent = 'エラーが発生しました。もう一度お試しください。';
+        if (resultDiv) {
+            resultDiv.className = 'speech-result wrong';
+            resultDiv.innerHTML = '音声認識を開始できませんでした。<br>ブラウザの設定でマイクを許可してください。';
+        }
+        return false;
+    }
+    return true;
+}
 
 // 発音チェック用フレーズデータ
 var pronunData = {
@@ -2955,7 +3041,7 @@ function prevPronunSentence() {
 
 function togglePronunRecording() {
     if (!SpeechRecognition) {
-        alert('お使いのブラウザは音声認識に対応していません。\nChrome または Edge をお使いください。');
+        alert('お使いのブラウザは音声認識に対応していません。\nChrome、Edge、または Safari をお使いください。');
         return;
     }
     var btn = document.getElementById('mic-btn-pronun');
@@ -2966,45 +3052,76 @@ function togglePronunRecording() {
         if (pronunRecognition) pronunRecognition.stop();
         return;
     }
-    isPronunRecording = true;
-    btn.classList.remove('idle');
-    btn.classList.add('recording');
-    document.getElementById('mic-status-pronun').textContent = '聞き取り中...話してください';
+
+    // Safari対応: マイク権限を事前取得してから認識を開始
+    var statusEl = document.getElementById('mic-status-pronun');
     var resultDiv = document.getElementById('pronun-result');
-    resultDiv.className = 'speech-result listening';
-    resultDiv.innerHTML = '&#127911; 聞き取り中...';
+    statusEl.textContent = 'マイクを準備中...';
 
-    pronunRecognition = new SpeechRecognition();
-    pronunRecognition.lang = 'en-US';
-    pronunRecognition.interimResults = false;
-    pronunRecognition.maxAlternatives = 1;
+    ensureMicPermission().then(function() {
+        isPronunRecording = true;
+        btn.classList.remove('idle');
+        btn.classList.add('recording');
+        statusEl.textContent = '聞き取り中...話してください';
+        resultDiv.className = 'speech-result listening';
+        resultDiv.innerHTML = '&#127911; 聞き取り中...';
 
-    pronunRecognition.onresult = function(event) {
-        var spoken = event.results[0][0].transcript;
-        var confidence = event.results[0][0].confidence;
-        var target = document.getElementById('pronun-target-en').textContent;
-        evaluatePronunciation(spoken, target, confidence, resultDiv);
-    };
-    pronunRecognition.onerror = function(event) {
-        isPronunRecording = false;
-        btn.classList.remove('recording');
-        btn.classList.add('idle');
-        document.getElementById('mic-status-pronun').textContent = 'エラーが発生しました。もう一度お試しください。';
+        pronunRecognition = new SpeechRecognition();
+        pronunRecognition.lang = 'en-US';
+        pronunRecognition.interimResults = false;
+        pronunRecognition.maxAlternatives = 1;
+        pronunRecognition.continuous = false;
+
+        var gotResult = false;
+
+        pronunRecognition.onresult = function(event) {
+            gotResult = true;
+            var spoken = event.results[0][0].transcript;
+            var confidence = event.results[0][0].confidence;
+            var target = document.getElementById('pronun-target-en').textContent;
+            evaluatePronunciation(spoken, target, confidence, resultDiv);
+        };
+        pronunRecognition.onerror = function(event) {
+            isPronunRecording = false;
+            btn.classList.remove('recording');
+            btn.classList.add('idle');
+            statusEl.textContent = 'エラーが発生しました。もう一度お試しください。';
+            resultDiv.className = 'speech-result wrong';
+            if (event.error === 'not-allowed') {
+                resultDiv.innerHTML = 'マイクの使用が許可されていません。<br>ブラウザの設定でマイクを許可してください。';
+            } else if (event.error === 'service-not-allowed') {
+                resultDiv.innerHTML = '<strong>Safariで音声認識が許可されていません。</strong><br>' +
+                    '以下の手順で有効にしてください：<br>' +
+                    '① Safari メニュー →「設定」→「Webサイト」→「マイク」<br>' +
+                    '② このサイトを「許可」に変更<br>' +
+                    '③ ページを再読み込みしてください<br><br>' +
+                    '<span style="font-size:0.85rem; color:#718096;">※ うまくいかない場合は Chrome ブラウザをお試しください。</span>';
+                statusEl.textContent = 'Safariの設定を確認してください。';
+            } else if (event.error === 'no-speech') {
+                resultDiv.innerHTML = '音声が検出されませんでした。もう一度お試しください。';
+            } else if (event.error === 'aborted') {
+                resultDiv.innerHTML = '音声認識が中断されました。もう一度お試しください。';
+            } else {
+                resultDiv.innerHTML = 'エラー: ' + event.error;
+            }
+        };
+        pronunRecognition.onend = function() {
+            isPronunRecording = false;
+            btn.classList.remove('recording');
+            btn.classList.add('idle');
+            if (!gotResult && resultDiv.className.indexOf('listening') !== -1) {
+                statusEl.textContent = '音声が検出されませんでした。もう一度お試しください。';
+                resultDiv.className = 'speech-result wrong';
+                resultDiv.innerHTML = '音声が検出されませんでした。<br>マイクが有効か確認してください。';
+            }
+        };
+
+        startRecognitionSafely(pronunRecognition, resultDiv, statusEl);
+    }).catch(function() {
+        statusEl.textContent = 'マイクの使用が許可されていません。';
         resultDiv.className = 'speech-result wrong';
-        if (event.error === 'not-allowed') {
-            resultDiv.innerHTML = 'マイクの使用が許可されていません。<br>ブラウザの設定でマイクを許可してください。';
-        } else if (event.error === 'no-speech') {
-            resultDiv.innerHTML = '音声が検出されませんでした。もう一度お試しください。';
-        } else {
-            resultDiv.innerHTML = 'エラー: ' + event.error;
-        }
-    };
-    pronunRecognition.onend = function() {
-        isPronunRecording = false;
-        btn.classList.remove('recording');
-        btn.classList.add('idle');
-    };
-    pronunRecognition.start();
+        resultDiv.innerHTML = 'マイクの使用が許可されていません。<br>ブラウザの設定でマイクを許可してください。';
+    });
 }
 
 function evaluatePronunciation(spoken, target, confidence, resultDiv) {
@@ -3182,7 +3299,7 @@ function playConvLine() {
 
 function toggleConvRecording() {
     if (!SpeechRecognition) {
-        alert('お使いのブラウザは音声認識に対応していません。\nChrome または Edge をお使いください。');
+        alert('お使いのブラウザは音声認識に対応していません。\nChrome、Edge、または Safari をお使いください。');
         return;
     }
     var scenario = convScenarios[convCurrentScenario];
@@ -3198,63 +3315,89 @@ function toggleConvRecording() {
         if (convRecognition) convRecognition.stop();
         return;
     }
-    isConvRecording = true;
-    btn.classList.remove('idle');
-    btn.classList.add('recording');
+
+    // Safari対応: マイク権限を事前取得してから認識を開始
     var resultDiv = document.getElementById('conv-result');
-    resultDiv.className = 'speech-result listening';
-    resultDiv.innerHTML = '&#127911; 聞き取り中...';
 
-    convRecognition = new SpeechRecognition();
-    convRecognition.lang = 'en-US';
-    convRecognition.interimResults = false;
-    convRecognition.maxAlternatives = 1;
+    ensureMicPermission().then(function() {
+        isConvRecording = true;
+        btn.classList.remove('idle');
+        btn.classList.add('recording');
+        resultDiv.className = 'speech-result listening';
+        resultDiv.innerHTML = '&#127911; 聞き取り中...';
 
-    convRecognition.onresult = function(event) {
-        var spoken = event.results[0][0].transcript;
-        var target = line.en;
-        var normalSpoken = spoken.toLowerCase().replace(/[^a-z0-9 ]/g, '').replace(/\s+/g, ' ').trim();
-        var normalTarget = target.toLowerCase().replace(/[^a-z0-9 ]/g, '').replace(/\s+/g, ' ').trim();
-        var similarity = calcSimilarity(normalSpoken, normalTarget);
-        var score = Math.round(similarity * 100);
+        convRecognition = new SpeechRecognition();
+        convRecognition.lang = 'en-US';
+        convRecognition.interimResults = false;
+        convRecognition.maxAlternatives = 1;
+        convRecognition.continuous = false;
 
-        if (score >= 50) {
-            resultDiv.className = 'speech-result correct';
-            resultDiv.innerHTML = '&#9989; "' + spoken + '" - ';
-            if (score >= 85) { resultDiv.innerHTML += '完璧です！'; }
-            else { resultDiv.innerHTML += 'OKです！（スコア: ' + score + '点）'; }
-            addChatBubble('user', line.en, line.ja);
-            convCurrentLine++;
-            document.getElementById('conv-hint').textContent = '';
-            setTimeout(function() {
-                resultDiv.className = 'speech-result';
-                resultDiv.innerHTML = '';
-                advanceConversation();
-            }, 1500);
-        } else {
+        var gotResult = false;
+
+        convRecognition.onresult = function(event) {
+            gotResult = true;
+            var spoken = event.results[0][0].transcript;
+            var target = line.en;
+            var normalSpoken = spoken.toLowerCase().replace(/[^a-z0-9 ]/g, '').replace(/\s+/g, ' ').trim();
+            var normalTarget = target.toLowerCase().replace(/[^a-z0-9 ]/g, '').replace(/\s+/g, ' ').trim();
+            var similarity = calcSimilarity(normalSpoken, normalTarget);
+            var score = Math.round(similarity * 100);
+
+            if (score >= 50) {
+                resultDiv.className = 'speech-result correct';
+                resultDiv.innerHTML = '&#9989; "' + spoken + '" - ';
+                if (score >= 85) { resultDiv.innerHTML += '完璧です！'; }
+                else { resultDiv.innerHTML += 'OKです！（スコア: ' + score + '点）'; }
+                addChatBubble('user', line.en, line.ja);
+                convCurrentLine++;
+                document.getElementById('conv-hint').textContent = '';
+                setTimeout(function() {
+                    resultDiv.className = 'speech-result';
+                    resultDiv.innerHTML = '';
+                    advanceConversation();
+                }, 1500);
+            } else {
+                resultDiv.className = 'speech-result wrong';
+                resultDiv.innerHTML = '&#128260; "' + spoken + '"<br>もう一度「' + line.hint + '」と言ってみましょう！（スコア: ' + score + '点）';
+            }
+        };
+        convRecognition.onerror = function(event) {
+            isConvRecording = false;
+            btn.classList.remove('recording');
+            btn.classList.add('idle');
             resultDiv.className = 'speech-result wrong';
-            resultDiv.innerHTML = '&#128260; "' + spoken + '"<br>もう一度「' + line.hint + '」と言ってみましょう！（スコア: ' + score + '点）';
-        }
-    };
-    convRecognition.onerror = function(event) {
-        isConvRecording = false;
-        btn.classList.remove('recording');
-        btn.classList.add('idle');
+            if (event.error === 'not-allowed') {
+                resultDiv.innerHTML = 'マイクの使用が許可されていません。<br>ブラウザの設定でマイクを許可してください。';
+            } else if (event.error === 'service-not-allowed') {
+                resultDiv.innerHTML = '<strong>Safariで音声認識が許可されていません。</strong><br>' +
+                    '以下の手順で有効にしてください：<br>' +
+                    '① Safari メニュー →「設定」→「Webサイト」→「マイク」<br>' +
+                    '② このサイトを「許可」に変更<br>' +
+                    '③ ページを再読み込みしてください<br><br>' +
+                    '<span style="font-size:0.85rem; color:#718096;">※ うまくいかない場合は Chrome ブラウザをお試しください。</span>';
+            } else if (event.error === 'no-speech') {
+                resultDiv.innerHTML = '音声が検出されませんでした。もう一度お試しください。';
+            } else if (event.error === 'aborted') {
+                resultDiv.innerHTML = '音声認識が中断されました。もう一度お試しください。';
+            } else {
+                resultDiv.innerHTML = 'エラー: ' + event.error;
+            }
+        };
+        convRecognition.onend = function() {
+            isConvRecording = false;
+            btn.classList.remove('recording');
+            btn.classList.add('idle');
+            if (!gotResult && resultDiv.className.indexOf('listening') !== -1) {
+                resultDiv.className = 'speech-result wrong';
+                resultDiv.innerHTML = '音声が検出されませんでした。<br>マイクが有効か確認してください。';
+            }
+        };
+
+        startRecognitionSafely(convRecognition, resultDiv, null);
+    }).catch(function() {
         resultDiv.className = 'speech-result wrong';
-        if (event.error === 'not-allowed') {
-            resultDiv.innerHTML = 'マイクの使用が許可されていません。';
-        } else if (event.error === 'no-speech') {
-            resultDiv.innerHTML = '音声が検出されませんでした。もう一度お試しください。';
-        } else {
-            resultDiv.innerHTML = 'エラー: ' + event.error;
-        }
-    };
-    convRecognition.onend = function() {
-        isConvRecording = false;
-        btn.classList.remove('recording');
-        btn.classList.add('idle');
-    };
-    convRecognition.start();
+        resultDiv.innerHTML = 'マイクの使用が許可されていません。<br>ブラウザの設定でマイクを許可してください。';
+    });
 }
 
 function skipConvLine() {
