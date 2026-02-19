@@ -2515,6 +2515,7 @@ function buildSidebar() {
 
 function showLesson(key) {
     currentLessonKey = key;
+    try { localStorage.setItem('lastLesson', key); } catch(e) {}
     var contentEl = document.getElementById('lesson-content');
     var stageLabel = '全学年共通レベル';
 
@@ -2598,8 +2599,8 @@ function addSpeakButtons() {
             if (!firstTd) return;
             if (firstTd.querySelector('.speak-btn')) return;
             var text = firstTd.textContent.trim();
-            // 英語が含まれているか判定
-            if (/[a-zA-Z]{2,}/.test(text) && !/^(SV|SVOO|SVOC|SVC|SVO)$/.test(text)) {
+            // 英語が含まれているか判定（短い文法用語は除外）
+            if (/[a-zA-Z]{2,}/.test(text) && !/^(SV|SVOO|SVOC|SVC|SVO)$/.test(text) && !/^(who|whom|which|that|whose)(\(.*\))?$/i.test(text) && text.length > 4) {
                 var btn = document.createElement('button');
                 btn.className = 'speak-btn';
                 btn.innerHTML = '&#128264;';
@@ -3422,6 +3423,8 @@ function resetConversation() {
 // 初期化
 // ============================================================
 buildSidebar();
-showLesson('lesson-1');
+var savedLesson = null;
+try { savedLesson = localStorage.getItem('lastLesson'); } catch(e) {}
+showLesson(savedLesson || 'lesson-1');
 // 会話練習の初期ロード
 loadConversation();
