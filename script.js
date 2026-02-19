@@ -2599,8 +2599,8 @@ function addSpeakButtons() {
             if (!firstTd) return;
             if (firstTd.querySelector('.speak-btn')) return;
             var text = firstTd.textContent.trim();
-            // 英語が含まれているか判定（短い文法用語は除外）
-            if (/[a-zA-Z]{2,}/.test(text) && !/^(SV|SVOO|SVOC|SVC|SVO)$/.test(text) && !/^(who|whom|which|that|whose)(\(.*\))?$/i.test(text) && text.length > 4) {
+            // 英語が含まれているか判定（日本語混在・短い文法用語は除外）
+            if (/[a-zA-Z]{2,}/.test(text) && !/[\u3000-\u9FFF]/.test(text) && !/^(SV|SVOO|SVOC|SVC|SVO)$/.test(text) && !/^(who|whom|which|that|whose|that)(\(.*\))?$/i.test(text) && text.length > 4) {
                 var btn = document.createElement('button');
                 btn.className = 'speak-btn';
                 btn.innerHTML = '&#128264;';
