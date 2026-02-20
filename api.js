@@ -1,5 +1,13 @@
 // JavaScript: 表現・通信担当 — バックエンドAPIとのブリッジ
-const API_BASE = 'http://localhost:5000/api';
+
+// ★ Renderデプロイ後、PROD_API をRenderのURLに変更してください
+const PROD_API  = 'https://english-study-api.onrender.com/api';
+const LOCAL_API = 'http://localhost:5000/api';
+
+const API_BASE = (
+    window.location.hostname === 'localhost' ||
+    window.location.hostname === '127.0.0.1'
+) ? LOCAL_API : PROD_API;
 
 
 // ── 進捗管理 ──────────────────────────────────────────

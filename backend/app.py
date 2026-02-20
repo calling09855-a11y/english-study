@@ -1,13 +1,22 @@
 # Python: 計算・ロジック担当
+import os
 from flask import Flask, jsonify, request
 from flask_cors import CORS
 import sqlite3
 from datetime import datetime
 
 app = Flask(__name__)
-CORS(app)
 
-DB_PATH = 'backend/study.db'
+# GitHub Pages と localhost の両方を許可
+CORS(app, origins=[
+    'https://calling09855-a11y.github.io',
+    'http://localhost:3000',
+    'http://localhost:5500',
+    'http://127.0.0.1:5500',
+])
+
+# Render では /tmp に書く（永続ディスクがない無料プランでも動く）
+DB_PATH = os.environ.get('DB_PATH', '/tmp/study.db')
 
 
 # ── DB初期化 ──────────────────────────────────────────
@@ -38,6 +47,12 @@ def init_db():
     ''')
     conn.commit()
     conn.close()
+
+
+# ── ヘルスチェック ────────────────────────────────────
+@app.route('/api/health', methods=['GET'])
+def health():
+    return jsonify({'status': 'ok'})
 
 
 # ── 進捗管理 API ──────────────────────────────────────
@@ -137,6 +152,8 @@ def delete_vocab(vocab_id):
 
 
 # ── 起動 ──────────────────────────────────────────────
+init_db()
+
 if __name__ == '__main__':
-    init_db()
-    app.run(debug=True, port=5000)
+    port = int(os.environ.get('PORT', 5000))
+    app.run(debug=False, host='0.0.0.0', port=port)

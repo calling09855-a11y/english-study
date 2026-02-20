@@ -1,0 +1,9 @@
+services:
+  - type: web
+    name: english-study-api
+    env: python
+    buildCommand: pip install -r backend/requirements.txt
+    startCommand: gunicorn --chdir backend -w 2 -b 0.0.0.0:$PORT app:app
+    envVars:
+      - key: DB_PATH
+        value: /tmp/study.db
