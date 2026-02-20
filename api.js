@@ -1,7 +1,7 @@
 // JavaScript: 表現・通信担当 — バックエンドAPIとのブリッジ
 
 // ★ Renderデプロイ後、PROD_API をRenderのURLに変更してください
-const PROD_API  = 'https://english-study-api.onrender.com/api';
+const PROD_API  = 'https://english-study-iz6i.onrender.com/api';
 const LOCAL_API = 'http://localhost:5000/api';
 
 const API_BASE = (
