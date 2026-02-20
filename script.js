@@ -219,12 +219,35 @@ lessonContent[1] = `
 </div>
 
 <div class="card">
+    <h2>SV文型に修飾語がつく場合</h2>
+    <p>SV文型の文に、場所・時間・方法などの<strong>修飾語（M）</strong>が加わることがあります。修飾語は文型の要素に含まれませんが、意味を豊かにします。</p>
+    <div class="example-box">
+        <div class="en">I run <strong>every morning</strong>.</div>
+        <div class="ja">私は毎朝走る。（every morning = 修飾語・時間）</div>
+    </div>
+    <div class="example-box">
+        <div class="en">She sings <strong>beautifully</strong>.</div>
+        <div class="ja">彼女は美しく歌う。（beautifully = 修飾語・様子）</div>
+    </div>
+    <div class="example-box">
+        <div class="en">He works <strong>in Tokyo</strong>.</div>
+        <div class="ja">彼は東京で働いている。（in Tokyo = 修飾語・場所）</div>
+    </div>
+
+    <div class="point-box">
+        修飾語があっても、S と V だけで文が成り立つなら SV文型です！<br>
+        「I run.（私は走る）」だけで意味が通る → SV文型
+    </div>
+</div>
+
+<div class="card">
     <h2>まとめ</h2>
     <ul style="padding-left:20px;">
         <li><strong>SV文型</strong> ＝ 主語（S）＋ 動詞（V）だけで文が完成する</li>
         <li>英語で最もシンプルな文の形</li>
         <li>動詞だけで意味が完結する（「何を」が不要）</li>
         <li>主語が三人称単数のとき、動詞に <strong>s</strong> をつける</li>
+        <li>場所・時間などの修飾語がついても文型はSVのまま</li>
     </ul>
 </div>
 `;
@@ -368,6 +391,28 @@ lessonContent[2] = `
 </div>
 
 <div class="card">
+    <h2>become と get：「〜になる」の SVC</h2>
+    <p><strong>become</strong> と <strong>get</strong> はどちらも「〜になる」の意味で、SVC文型を作ります。</p>
+    <div class="example-box">
+        <div class="en">He <strong>became</strong> a famous singer.</div>
+        <div class="ja">彼は有名な歌手になった。（名詞が補語）</div>
+    </div>
+    <div class="example-box">
+        <div class="en">It <strong>got</strong> dark outside.</div>
+        <div class="ja">外が暗くなった。（形容詞が補語）</div>
+    </div>
+    <div class="example-box">
+        <div class="en">She <strong>became</strong> very famous.</div>
+        <div class="ja">彼女はとても有名になった。</div>
+    </div>
+
+    <div class="point-box">
+        become → フォーマルな場面（より格式的）<br>
+        get → 日常会話に多い（It's getting cold = 寒くなってきた）
+    </div>
+</div>
+
+<div class="card">
     <h2>まとめ</h2>
     <ul style="padding-left:20px;">
         <li><strong>SVC文型</strong> ＝ 主語（S）＋ 動詞（V）＋ 補語（C）</li>
@@ -497,6 +542,24 @@ lessonContent[3] = `
 </div>
 
 <div class="card">
+    <h2>目的語には代名詞の目的格を使う</h2>
+    <p>目的語（O）に代名詞を使うときは、<strong>目的格</strong>（me, him, her, them...）を使います。</p>
+    <table>
+        <tr><th>主格（主語）</th><th>目的格（目的語）</th><th>例文</th></tr>
+        <tr><td>I</td><td><strong>me</strong></td><td>Please help <strong>me</strong>.</td></tr>
+        <tr><td>he</td><td><strong>him</strong></td><td>I know <strong>him</strong>.</td></tr>
+        <tr><td>she</td><td><strong>her</strong></td><td>I like <strong>her</strong>.</td></tr>
+        <tr><td>they</td><td><strong>them</strong></td><td>I saw <strong>them</strong>.</td></tr>
+        <tr><td>we</td><td><strong>us</strong></td><td>She helped <strong>us</strong>.</td></tr>
+    </table>
+
+    <div class="warn-box">
+        ✕ I like <strong>she</strong>.（主格は目的語に使えない！）<br>
+        ○ I like <strong>her</strong>.（目的格が正しい）
+    </div>
+</div>
+
+<div class="card">
     <h2>まとめ</h2>
     <ul style="padding-left:20px;">
         <li><strong>SVO文型</strong> ＝ 主語（S）＋ 動詞（V）＋ 目的語（O）</li>
@@ -504,6 +567,7 @@ lessonContent[3] = `
         <li>目的語（O）＝ 動作の対象（「〜を」「〜が」にあたるもの）</li>
         <li>S ≠ O が成り立つ → SVO文型と判断</li>
         <li>英語で <strong>最もよく使う文型</strong></li>
+        <li>目的語に代名詞を使うときは<strong>目的格</strong>（me, him, her...）</li>
     </ul>
 </div>
 `;
@@ -619,12 +683,50 @@ lessonContent[4] = `
 </div>
 
 <div class="card">
+    <h2>よく使う副詞</h2>
+    <table>
+        <tr><th>副詞</th><th>意味</th><th>使い方</th></tr>
+        <tr><td>very</td><td>とても</td><td>very kind, very fast</td></tr>
+        <tr><td>really</td><td>本当に</td><td>really good, really hard</td></tr>
+        <tr><td>always</td><td>いつも</td><td>She always smiles.</td></tr>
+        <tr><td>usually</td><td>たいてい</td><td>I usually walk.</td></tr>
+        <tr><td>often</td><td>よく・しばしば</td><td>He often reads books.</td></tr>
+        <tr><td>sometimes</td><td>ときどき</td><td>We sometimes swim.</td></tr>
+        <tr><td>never</td><td>一度も〜ない</td><td>I never give up.</td></tr>
+        <tr><td>already</td><td>もう・すでに</td><td>I already know.</td></tr>
+    </table>
+
+    <div class="point-box">
+        頻度を表す副詞（always, usually, often, sometimes, never）は<strong>動詞の前・be動詞の後ろ</strong>に置くのが基本です！<br>
+        I <strong>always</strong> eat breakfast. / She is <strong>always</strong> happy.
+    </div>
+</div>
+
+<div class="card">
+    <h2>形容詞と副詞が同じ形の語</h2>
+    <table>
+        <tr><th>語</th><th>形容詞の用法</th><th>副詞の用法</th></tr>
+        <tr><td><strong>fast</strong></td><td>a fast car（速い車）</td><td>run fast（速く走る）</td></tr>
+        <tr><td><strong>hard</strong></td><td>hard work（つらい仕事）</td><td>work hard（一生懸命働く）</td></tr>
+        <tr><td><strong>late</strong></td><td>a late train（遅い電車）</td><td>arrive late（遅く到着する）</td></tr>
+        <tr><td><strong>early</strong></td><td>an early start（早いスタート）</td><td>wake up early（早く起きる）</td></tr>
+    </table>
+
+    <div class="warn-box">
+        <strong>hard</strong> と <strong>hardly</strong> は意味が違う！<br>
+        work <strong>hard</strong> = 一生懸命働く ✓<br>
+        work <strong>hardly</strong> = ほとんど働かない（hardly = ほとんど〜ない）
+    </div>
+</div>
+
+<div class="card">
     <h2>まとめ</h2>
     <ul style="padding-left:20px;">
         <li><strong>形容詞</strong>：名詞を説明する。名詞の前 or 補語（C）に置く</li>
         <li><strong>副詞</strong>：動詞・形容詞・副詞を説明する</li>
         <li>形容詞 + <strong>ly</strong> → 副詞になる（例：slow → slowly）</li>
         <li>副詞は文型の要素（S, V, O, C）には含まれない</li>
+        <li>fast, hard, late, early など形容詞と副詞が同形の語もある</li>
     </ul>
 </div>
 `;
@@ -732,12 +834,40 @@ lessonContent[5] = `
 </div>
 
 <div class="card">
+    <h2>to か for か？書き換えのポイント</h2>
+    <div class="comparison-box">
+        <div class="jp-order">
+            <h4>to を使う動詞</h4>
+            <p>「相手に向かって」方向性がある</p>
+            <p>give, tell, show, teach,<br>send, write, pass, lend</p>
+            <p><strong>I gave a book <u>to</u> him.</strong></p>
+        </div>
+        <div class="en-order">
+            <h4>for を使う動詞</h4>
+            <p>「相手のために」恩恵がある</p>
+            <p>buy, make, cook, get,<br>find, order, choose</p>
+            <p><strong>I bought flowers <u>for</u> her.</strong></p>
+        </div>
+    </div>
+
+    <div class="example-box">
+        <div class="en">She wrote <strong>me</strong> a letter. = She wrote a letter <strong>to me</strong>.</div>
+        <div class="ja">彼女は私に手紙を書いた。</div>
+    </div>
+    <div class="example-box">
+        <div class="en">He made <strong>us</strong> dinner. = He made dinner <strong>for us</strong>.</div>
+        <div class="ja">彼は私たちに夕食を作ってくれた。</div>
+    </div>
+</div>
+
+<div class="card">
     <h2>まとめ</h2>
     <ul style="padding-left:20px;">
         <li><strong>SVOO文型</strong> ＝ S + V + O1（人に）+ O2（ものを）</li>
         <li>「人に」→「ものを」の順番で並べる</li>
         <li>SVO + to/for で書き換えできる</li>
-        <li>give/tell/show → to、buy/make → for</li>
+        <li>give/tell/show/teach/send → <strong>to</strong>（方向）</li>
+        <li>buy/make/cook/get → <strong>for</strong>（恩恵）</li>
     </ul>
 </div>
 `;
@@ -865,11 +995,33 @@ lessonContent[6] = `
 </div>
 
 <div class="card">
+    <h2>知覚動詞を使ったSVOC</h2>
+    <p>見る・聞く・感じるなどの<strong>知覚動詞</strong>も SVOC文型で使われます。補語には<strong>動詞の原形</strong>や<strong>現在分詞</strong>が入ります。</p>
+    <table>
+        <tr><th>動詞</th><th>意味</th><th>例文</th></tr>
+        <tr><td>see</td><td>〜が…するのを見る</td><td>I saw him run.</td></tr>
+        <tr><td>hear</td><td>〜が…するのを聞く</td><td>I heard her sing.</td></tr>
+        <tr><td>feel</td><td>〜が…するのを感じる</td><td>I felt something move.</td></tr>
+        <tr><td>watch</td><td>〜が…するのを見る（じっくり）</td><td>We watched him dance.</td></tr>
+    </table>
+
+    <div class="example-box">
+        <div class="en">I saw a bird <strong>fly</strong> out of the cage.</div>
+        <div class="ja">私は鳥がかごから飛び出るのを見た。</div>
+    </div>
+    <div class="example-box">
+        <div class="en">She heard someone <strong>calling</strong> her name.</div>
+        <div class="ja">彼女は誰かが自分の名前を呼ぶのを聞いた。</div>
+    </div>
+</div>
+
+<div class="card">
     <h2>まとめ</h2>
     <ul style="padding-left:20px;">
         <li><strong>SVOC文型</strong> ＝ S + V + O + C（O = C が成り立つ）</li>
         <li>SVOOとの見分け：O1≠O2ならSVOO、O=CならSVOC</li>
         <li>call, name, make, find, keep がSVOC動詞の代表</li>
+        <li>知覚動詞（see, hear, feel）も SVOC で使える（補語は原形 or -ing）</li>
         <li>これで <strong>5文型すべて完了！</strong> この基礎が今後の学習の土台になります</li>
     </ul>
 </div>
@@ -976,6 +1128,26 @@ lessonContent[7] = `
 </div>
 
 <div class="card">
+    <h2>よく使う一般動詞の三単現形</h2>
+    <table>
+        <tr><th>原形</th><th>三単現</th><th>原形</th><th>三単現</th></tr>
+        <tr><td>play</td><td>plays</td><td>study</td><td>studies</td></tr>
+        <tr><td>run</td><td>runs</td><td>go</td><td>goes</td></tr>
+        <tr><td>like</td><td>likes</td><td>watch</td><td>watches</td></tr>
+        <tr><td>eat</td><td>eats</td><td>have</td><td>has ★不規則</td></tr>
+    </table>
+
+    <div class="example-box">
+        <div class="en">My mother <strong>goes</strong> to work every day.</div>
+        <div class="ja">私の母は毎日仕事に行きます。</div>
+    </div>
+    <div class="example-box">
+        <div class="en">She <strong>has</strong> a big dog.</div>
+        <div class="ja">彼女は大きな犬を飼っています。</div>
+    </div>
+</div>
+
+<div class="card">
     <h2>まとめ</h2>
     <ul style="padding-left:20px;">
         <li>英語の文には必ず<strong>主語</strong>と<strong>動詞</strong>が必要</li>
@@ -1061,6 +1233,42 @@ lessonContent[8] = `
         <button onclick="checkExercise('ex8-3', ['children'])">答え合わせ</button>
         <div class="feedback" id="ex8-3-fb"></div>
     </div>
+</div>
+
+<div class="card">
+    <h2>代名詞の使い方（実践）</h2>
+    <div class="example-box">
+        <div class="en">Tom likes soccer. <strong>He</strong> plays it every day.</div>
+        <div class="ja">トムはサッカーが好きです。彼は毎日それをします。</div>
+    </div>
+    <div class="example-box">
+        <div class="en">That bag is <strong>hers</strong>, not <strong>mine</strong>.</div>
+        <div class="ja">あのカバンは彼女のもので、私のではありません。</div>
+    </div>
+    <div class="example-box">
+        <div class="en">I gave <strong>them</strong> <strong>their</strong> books.</div>
+        <div class="ja">私は彼らに彼らの本を渡した。</div>
+    </div>
+
+    <div class="warn-box">
+        ✕ She likes she's dog.（所有格を忘れずに！）<br>
+        ○ She likes <strong>her</strong> dog.（「彼女の」= her）
+    </div>
+</div>
+
+<div class="card">
+    <h2>不規則複数形のまとめ</h2>
+    <table>
+        <tr><th>単数</th><th>複数</th><th>意味</th></tr>
+        <tr><td>man</td><td>men</td><td>男性</td></tr>
+        <tr><td>woman</td><td>women</td><td>女性</td></tr>
+        <tr><td>child</td><td>children</td><td>子ども</td></tr>
+        <tr><td>foot</td><td>feet</td><td>足</td></tr>
+        <tr><td>tooth</td><td>teeth</td><td>歯</td></tr>
+        <tr><td>mouse</td><td>mice</td><td>ネズミ</td></tr>
+        <tr><td>sheep</td><td>sheep</td><td>羊（単複同形）</td></tr>
+        <tr><td>fish</td><td>fish</td><td>魚（単複同形）</td></tr>
+    </table>
 </div>
 
 <div class="card">
@@ -1164,6 +1372,27 @@ lessonContent[9] = `
         <button onclick="checkExercise('ex9-3', ['Do you play tennis?', 'Do you play tennis'])">答え合わせ</button>
         <div class="feedback" id="ex9-3-fb"></div>
     </div>
+    <div class="exercise">
+        <p>Q4. 疑問文にしましょう。「She studies math every day.」</p>
+        <input type="text" id="ex9-4" placeholder="疑問文を入力">
+        <button onclick="checkExercise('ex9-4', ['Does she study math every day?', 'Does she study math every day'])">答え合わせ</button>
+        <div class="feedback" id="ex9-4-fb"></div>
+    </div>
+</div>
+
+<div class="card">
+    <h2>短縮形のまとめ</h2>
+    <table>
+        <tr><th>元の形</th><th>短縮形</th><th>元の形</th><th>短縮形</th></tr>
+        <tr><td>I am not</td><td>I'm not</td><td>do not</td><td>don't</td></tr>
+        <tr><td>she is not</td><td>she isn't</td><td>does not</td><td>doesn't</td></tr>
+        <tr><td>they are not</td><td>they aren't</td><td>did not</td><td>didn't</td></tr>
+    </table>
+
+    <div class="point-box">
+        会話では短縮形が自然です。ただし、強調するときや公式文書では短縮しないこともあります。<br>
+        ✕ I amn't（I am not の短縮形は存在しない！I'm not が正しい）
+    </div>
 </div>
 `;
 
@@ -1264,6 +1493,29 @@ lessonContent[10] = `
         <button onclick="checkExercise('ex10-3', ['Did she go to Tokyo?', 'Did she go to Tokyo'])">答え合わせ</button>
         <div class="feedback" id="ex10-3-fb"></div>
     </div>
+    <div class="exercise">
+        <p>Q4. 正しい過去形にしましょう。「She (eat) pizza last night.」</p>
+        <input type="text" id="ex10-4" placeholder="過去形を入力">
+        <button onclick="checkExercise('ex10-4', ['ate'])">答え合わせ</button>
+        <div class="feedback" id="ex10-4-fb"></div>
+    </div>
+</div>
+
+<div class="card">
+    <h2>過去のことを表す副詞・副詞句</h2>
+    <table>
+        <tr><th>表現</th><th>意味</th><th>例文</th></tr>
+        <tr><td>yesterday</td><td>昨日</td><td>I went there yesterday.</td></tr>
+        <tr><td>last night</td><td>昨夜</td><td>She called me last night.</td></tr>
+        <tr><td>last week</td><td>先週</td><td>He visited us last week.</td></tr>
+        <tr><td>last year</td><td>去年</td><td>They lived in Tokyo last year.</td></tr>
+        <tr><td>... ago</td><td>〜前</td><td>I met him two years ago.</td></tr>
+        <tr><td>in 2020</td><td>2020年に</td><td>She was born in 2020.</td></tr>
+    </table>
+
+    <div class="point-box">
+        これらの語句があると、文は<strong>過去形</strong>を使います。現在完了形（have + 過去分詞）と一緒には使えません！
+    </div>
 </div>
 `;
 
@@ -1340,6 +1592,37 @@ lessonContent[11] = `
         <input type="text" id="ex11-3" placeholder="冠詞を入力">
         <button onclick="checkExercise('ex11-3', ['The', 'the'])">答え合わせ</button>
         <div class="feedback" id="ex11-3-fb"></div>
+    </div>
+</div>
+
+<div class="card">
+    <h2>a / an の使い分けの注意点</h2>
+    <p>スペルではなく<strong>発音の最初の音</strong>で判断します。</p>
+    <table>
+        <tr><th>語</th><th>冠詞</th><th>理由</th></tr>
+        <tr><td>university</td><td>a</td><td>/j/ の音で始まる（ユニバーシティ）</td></tr>
+        <tr><td>hour</td><td>an</td><td>h が無音で母音 /aʊ/ で始まる</td></tr>
+        <tr><td>honest</td><td>an</td><td>h が無音で母音 /ɒ/ で始まる</td></tr>
+        <tr><td>European</td><td>a</td><td>/j/ の音で始まる</td></tr>
+        <tr><td>apple</td><td>an</td><td>母音 /æ/ で始まる</td></tr>
+    </table>
+</div>
+
+<div class="card">
+    <h2>the を使わない重要表現</h2>
+    <table>
+        <tr><th>表現</th><th>the の有無</th><th>例</th></tr>
+        <tr><td>スポーツ</td><td>なし</td><td>play <strong>soccer</strong>, play <strong>tennis</strong></td></tr>
+        <tr><td>食事</td><td>なし</td><td>eat <strong>lunch</strong>, have <strong>dinner</strong></td></tr>
+        <tr><td>教科</td><td>なし</td><td>study <strong>math</strong>, teach <strong>English</strong></td></tr>
+        <tr><td>曜日・月・季節</td><td>なし（通常）</td><td>on <strong>Monday</strong>, in <strong>March</strong></td></tr>
+        <tr><td>固有名詞</td><td>なし</td><td><strong>Japan</strong>, <strong>Tokyo</strong>, <strong>Tom</strong></td></tr>
+    </table>
+
+    <div class="warn-box">
+        ✕ I play <strong>the</strong> soccer.（スポーツに the はつけない！）<br>
+        ○ I play <strong>soccer</strong>.<br>
+        ただし楽器には the をつける → I play <strong>the</strong> piano.
     </div>
 </div>
 `;
@@ -1436,12 +1719,31 @@ lessonContent[12] = `
 </div>
 
 <div class="card">
+    <h2>進行形を使わない動詞</h2>
+    <p>「状態」を表す動詞は進行形にしません。状態は「変化しないもの」なので -ing にしない！</p>
+    <table>
+        <tr><th>動詞</th><th>意味</th><th>注意</th></tr>
+        <tr><td>like / love / hate</td><td>好き / 大好き / 嫌い</td><td>気持ち・状態を表す</td></tr>
+        <tr><td>know / understand</td><td>知る / 理解する</td><td>認知・状態</td></tr>
+        <tr><td>have（持つ）</td><td>持っている</td><td>所有の状態</td></tr>
+        <tr><td>need / want</td><td>必要とする / 欲しい</td><td>欲求・状態</td></tr>
+        <tr><td>see（見える）/ hear（聞こえる）</td><td>知覚動詞</td><td>自然に知覚している状態</td></tr>
+    </table>
+
+    <div class="warn-box">
+        ✕ I am knowing him.（know は状態動詞 → 進行形にしない）<br>
+        ○ I <strong>know</strong> him.（現在形で表す）
+    </div>
+</div>
+
+<div class="card">
     <h2>まとめ</h2>
     <ul style="padding-left:20px;">
         <li><strong>現在進行形</strong> = am/is/are + 動詞ing（今〜しているところ）</li>
         <li><strong>過去進行形</strong> = was/were + 動詞ing（あのとき〜していた）</li>
         <li>否定文・疑問文は<strong>be動詞のルール</strong>に従う</li>
         <li>ing のつけ方のルールに注意（e を取る・子音を重ねる等）</li>
+        <li>like / know / have（所有）など<strong>状態動詞</strong>は進行形にしない</li>
     </ul>
 </div>
 `;
@@ -1512,6 +1814,56 @@ lessonContent[13] = `
     </div>
 </div>
 
+<div class="card">
+    <h2>will と be going to の使い分け（例）</h2>
+    <div class="comparison-box">
+        <div class="jp-order">
+            <h4>will（その場で決めた）</h4>
+            <p style="color:#718096">A: This bag is so heavy!</p>
+            <p><strong>I'll carry it for you.</strong></p>
+            <p style="color:#718096">（今その場で「持ってあげよう」と思った）</p>
+        </div>
+        <div class="en-order">
+            <h4>be going to（前から計画）</h4>
+            <p style="color:#718096">A: What are you doing this weekend?</p>
+            <p><strong>I'm going to visit my grandmother.</strong></p>
+            <p style="color:#718096">（前から決めていた予定）</p>
+        </div>
+    </div>
+</div>
+
+<div class="card">
+    <h2>will の意志・依頼・勧誘</h2>
+    <table>
+        <tr><th>使い方</th><th>例文</th><th>意味</th></tr>
+        <tr><td>意志（〜するつもり）</td><td>I will do my best.</td><td>全力を尽くします。</td></tr>
+        <tr><td>依頼（〜してくれますか）</td><td>Will you help me?</td><td>手伝ってもらえますか？</td></tr>
+        <tr><td>勧誘（〜しませんか）</td><td>Will you come with me?</td><td>一緒に来ませんか？</td></tr>
+        <tr><td>予測（〜するだろう）</td><td>It will snow tomorrow.</td><td>明日は雪が降るだろう。</td></tr>
+    </table>
+</div>
+
+<div class="card">
+    <h2>be going to の否定文・疑問文</h2>
+    <div class="example-box">
+        <div class="en">I <strong>am not going to</strong> study tonight.</div>
+        <div class="ja">今夜は勉強するつもりはありません。</div>
+    </div>
+    <div class="example-box">
+        <div class="en"><strong>Are</strong> you <strong>going to</strong> attend the meeting? ─ Yes, I am.</div>
+        <div class="ja">会議に出席する予定ですか？ ─ はい、そうです。</div>
+    </div>
+    <div class="example-box">
+        <div class="en">What <strong>are</strong> you <strong>going to</strong> do tomorrow?</div>
+        <div class="ja">明日は何をする予定ですか？</div>
+    </div>
+
+    <div class="point-box">
+        be going to の be動詞は主語によって変わります！<br>
+        I <strong>am</strong> going to / He <strong>is</strong> going to / They <strong>are</strong> going to
+    </div>
+</div>
+
 <div class="card" id="exercises-13"></div>
 `;
 
@@ -1577,6 +1929,54 @@ lessonContent[14] = `
     </div>
 </div>
 
+<div class="card">
+    <h2>may と could の丁寧な使い方</h2>
+    <p>依頼・許可を求めるとき、can より<strong>may / could</strong> の方が丁寧です。</p>
+    <table>
+        <tr><th>表現</th><th>丁寧さ</th><th>例</th></tr>
+        <tr><td>Can I ...?</td><td>普通</td><td>Can I use your pen?</td></tr>
+        <tr><td>Could I ...?</td><td>丁寧</td><td>Could I use your pen?</td></tr>
+        <tr><td>May I ...?</td><td>より丁寧</td><td>May I come in?</td></tr>
+    </table>
+
+    <div class="example-box">
+        <div class="en"><strong>Could you</strong> tell me the way to the station?</div>
+        <div class="ja">駅への道を教えていただけますか？（丁寧な依頼）</div>
+    </div>
+</div>
+
+<div class="card">
+    <h2>should と had better の違い</h2>
+    <div class="comparison-box">
+        <div class="jp-order">
+            <h4>should（〜すべきだ）</h4>
+            <p><strong>You should see a doctor.</strong></p>
+            <p style="color:#718096">医者に行ったほうがいいですよ。（アドバイス・助言）</p>
+        </div>
+        <div class="en-order">
+            <h4>had better（〜したほうがいい）</h4>
+            <p><strong>You had better see a doctor.</strong></p>
+            <p style="color:#718096">医者に行ったほうがいい。（強めの忠告）</p>
+        </div>
+    </div>
+
+    <div class="warn-box">
+        <strong>had better</strong> には「しないと悪いことが起きる」というニュアンスがあります。目上の人に使うのは不適切な場合もあります。
+    </div>
+</div>
+
+<div class="card">
+    <h2>助動詞の否定形まとめ</h2>
+    <table>
+        <tr><th>助動詞</th><th>否定形</th><th>意味</th><th>例文</th></tr>
+        <tr><td>can</td><td>cannot / can't</td><td>〜できない</td><td>I can't swim.</td></tr>
+        <tr><td>must</td><td>must not / mustn't</td><td>〜してはいけない</td><td>You must not run here.</td></tr>
+        <tr><td>have to</td><td>don't have to</td><td>〜しなくてよい</td><td>You don't have to go.</td></tr>
+        <tr><td>should</td><td>should not / shouldn't</td><td>〜すべきでない</td><td>You shouldn't lie.</td></tr>
+        <tr><td>will</td><td>will not / won't</td><td>〜しない・しないだろう</td><td>I won't give up.</td></tr>
+    </table>
+</div>
+
 <div class="card" id="exercises-14"></div>
 `;
 
@@ -1623,11 +2023,48 @@ lessonContent[15] = `
     <h3>How + 形容詞/副詞</h3>
     <table>
         <tr><th>表現</th><th>意味</th><th>例文</th></tr>
-        <tr><td>How many</td><td>いくつ</td><td>How many books do you have?</td></tr>
-        <tr><td>How much</td><td>いくら</td><td>How much is this?</td></tr>
+        <tr><td>How many</td><td>いくつ（数えられる名詞）</td><td>How many books do you have?</td></tr>
+        <tr><td>How much</td><td>いくら・どのくらい（数えられない名詞）</td><td>How much is this?</td></tr>
         <tr><td>How old</td><td>何歳</td><td>How old are you?</td></tr>
         <tr><td>How long</td><td>どのくらい（時間・長さ）</td><td>How long does it take?</td></tr>
         <tr><td>How often</td><td>どのくらいの頻度で</td><td>How often do you exercise?</td></tr>
+        <tr><td>How far</td><td>どのくらい遠い（距離）</td><td>How far is it to the station?</td></tr>
+        <tr><td>How soon</td><td>どのくらい早く</td><td>How soon can you come?</td></tr>
+    </table>
+</div>
+
+<div class="card">
+    <h2>疑問詞が主語になるとき</h2>
+    <p>疑問詞 who / what が主語になるとき、語順は<strong>疑問詞 + 動詞</strong>（Do や Did を使わない）。</p>
+    <div class="example-box">
+        <div class="en"><strong>Who</strong> broke the window?</div>
+        <div class="ja">誰が窓を割ったの？（Who が主語 → do を使わない）</div>
+    </div>
+    <div class="example-box">
+        <div class="en"><strong>What</strong> happened?</div>
+        <div class="ja">何が起きたの？（What が主語 → do を使わない）</div>
+    </div>
+    <div class="example-box">
+        <div class="en"><strong>Who</strong> lives in this house?</div>
+        <div class="ja">誰がこの家に住んでいるの？</div>
+    </div>
+
+    <div class="warn-box">
+        疑問詞が目的語のとき → <strong>疑問詞 + do/did + 主語 + 動詞?</strong><br>
+        <strong>Who do</strong> you like?（あなたは誰が好きですか？）← who = 目的語<br>
+        <strong>Who</strong> likes you?（誰があなたのことが好きですか？）← who = 主語
+    </div>
+</div>
+
+<div class="card">
+    <h2>疑問詞を使った重要表現</h2>
+    <table>
+        <tr><th>表現</th><th>意味</th><th>例文</th></tr>
+        <tr><td>What time</td><td>何時</td><td>What time is it now?</td></tr>
+        <tr><td>What day</td><td>何曜日</td><td>What day is it today?</td></tr>
+        <tr><td>What kind of</td><td>どんな種類の</td><td>What kind of music do you like?</td></tr>
+        <tr><td>Which one</td><td>どちら（の一つ）</td><td>Which one do you prefer?</td></tr>
+        <tr><td>Whose + 名詞</td><td>誰の〜</td><td>Whose bag is this?</td></tr>
     </table>
 </div>
 
@@ -1650,6 +2087,12 @@ lessonContent[15] = `
         <input type="text" id="ex15-3" placeholder="英語で入力">
         <button onclick="checkExercise('ex15-3', ['Why do you study English?', 'Why do you study English', 'Why are you studying English?'])">答え合わせ</button>
         <div class="feedback" id="ex15-3-fb"></div>
+    </div>
+    <div class="exercise">
+        <p>Q4. 「本が何冊ありますか？」を英語に。</p>
+        <input type="text" id="ex15-4" placeholder="英語で入力">
+        <button onclick="checkExercise('ex15-4', ['How many books do you have?', 'How many books are there?'])">答え合わせ</button>
+        <div class="feedback" id="ex15-4-fb"></div>
     </div>
 </div>
 `;
@@ -1722,6 +2165,58 @@ lessonContent[16] = `
         <input type="text" id="ex16-3" placeholder="前置詞を入力">
         <button onclick="checkExercise('ex16-3', ['in', 'In'])">答え合わせ</button>
         <div class="feedback" id="ex16-3-fb"></div>
+    </div>
+</div>
+
+<div class="card">
+    <h2>前置詞を使った重要表現</h2>
+    <table>
+        <tr><th>表現</th><th>意味</th><th>例文</th></tr>
+        <tr><td>be good at</td><td>〜が得意だ</td><td>She is good at math.</td></tr>
+        <tr><td>be interested in</td><td>〜に興味がある</td><td>I am interested in music.</td></tr>
+        <tr><td>be different from</td><td>〜と違う</td><td>This is different from that.</td></tr>
+        <tr><td>be late for</td><td>〜に遅れる</td><td>Don't be late for school.</td></tr>
+        <tr><td>be afraid of</td><td>〜を恐れている</td><td>He is afraid of dogs.</td></tr>
+        <tr><td>look forward to</td><td>〜を楽しみにする</td><td>I look forward to seeing you.</td></tr>
+    </table>
+</div>
+
+<div class="card">
+    <h2>移動方向の前置詞</h2>
+    <table>
+        <tr><th>前置詞</th><th>意味</th><th>例文</th></tr>
+        <tr><td><strong>to</strong></td><td>〜へ（目的地）</td><td>I go to school every day.</td></tr>
+        <tr><td><strong>into</strong></td><td>〜の中へ（入る）</td><td>She walked into the room.</td></tr>
+        <tr><td><strong>out of</strong></td><td>〜から外へ（出る）</td><td>He came out of the store.</td></tr>
+        <tr><td><strong>through</strong></td><td>〜を通り抜けて</td><td>We walked through the park.</td></tr>
+        <tr><td><strong>along</strong></td><td>〜に沿って</td><td>Walk along this road.</td></tr>
+    </table>
+
+    <div class="example-box">
+        <div class="en">The cat jumped <strong>into</strong> the box.</div>
+        <div class="ja">猫は箱の中へ飛び込んだ。</div>
+    </div>
+    <div class="example-box">
+        <div class="en">We walked <strong>along</strong> the river.</div>
+        <div class="ja">私たちは川に沿って歩いた。</div>
+    </div>
+</div>
+
+<div class="card">
+    <h2>よく間違える前置詞の使い分け</h2>
+    <div class="comparison-box">
+        <div class="jp-order">
+            <h4>in と at（場所）</h4>
+            <p>I live <strong>in</strong> Tokyo.（都市・国 → in）</p>
+            <p>I am <strong>at</strong> the station.（地点・場所 → at）</p>
+            <p style="color:#718096">inは「大きな空間の中」<br>atは「特定の地点」</p>
+        </div>
+        <div class="en-order">
+            <h4>on と at（時）</h4>
+            <p>I work <strong>on</strong> Mondays.（曜日 → on）</p>
+            <p>The class starts <strong>at</strong> 9.（時刻 → at）</p>
+            <p style="color:#718096">曜日はon<br>時刻はat</p>
+        </div>
     </div>
 </div>
 `;
@@ -2438,6 +2933,53 @@ lessonContent[22] = `
     </div>
 </div>
 
+<div class="card">
+    <h2>助動詞がある受動態</h2>
+    <p><strong>助動詞 + be + 過去分詞</strong> の形になります。</p>
+    <div class="example-box">
+        <div class="en">This task <strong>must be done</strong> today.</div>
+        <div class="ja">この作業は今日中にやらなければならない。</div>
+    </div>
+    <div class="example-box">
+        <div class="en">The rules <strong>should be followed</strong>.</div>
+        <div class="ja">ルールは守られるべきです。</div>
+    </div>
+    <div class="example-box">
+        <div class="en">This problem <strong>can be solved</strong> easily.</div>
+        <div class="ja">この問題は簡単に解くことができる。</div>
+    </div>
+</div>
+
+<div class="card">
+    <h2>by を省略するケース</h2>
+    <p>「誰によって」が不明・不要なときは by 以下を省略します。</p>
+    <div class="example-box">
+        <div class="en">English <strong>is spoken</strong> all over the world.</div>
+        <div class="ja">英語は世界中で話されている。（「誰によって」は明らかなので省略）</div>
+    </div>
+    <div class="example-box">
+        <div class="en">My bike <strong>was stolen</strong> last night.</div>
+        <div class="ja">昨夜、自転車が盗まれた。（犯人が不明なので省略）</div>
+    </div>
+
+    <div class="point-box">
+        「誰が？」が<strong>重要でない・わからない・当たり前</strong>のときは by 以下を省略するのが自然です。
+    </div>
+</div>
+
+<div class="card">
+    <h2>よく使う過去分詞（受動態でよく出る形）</h2>
+    <table>
+        <tr><th>原形</th><th>過去分詞</th><th>受動態の例</th></tr>
+        <tr><td>make</td><td>made</td><td>is made in Japan（日本製）</td></tr>
+        <tr><td>write</td><td>written</td><td>is written in English（英語で書かれている）</td></tr>
+        <tr><td>speak</td><td>spoken</td><td>is spoken in Canada（カナダで話されている）</td></tr>
+        <tr><td>build</td><td>built</td><td>was built in 1868（1868年に建てられた）</td></tr>
+        <tr><td>call</td><td>called</td><td>is called Fuji（富士と呼ばれている）</td></tr>
+        <tr><td>know</td><td>known</td><td>is known all over the world（世界中に知られている）</td></tr>
+    </table>
+</div>
+
 <div class="card" id="exercises-22"></div>
 `;
 
@@ -2670,6 +3212,30 @@ lessonContent[24] = `
     </div>
 </div>
 
+<div class="card">
+    <h2>よく使う不規則動詞の過去分詞</h2>
+    <p>現在完了形は<strong>have/has + 過去分詞</strong>なので、過去分詞の形を確認しましょう！</p>
+    <table>
+        <tr><th>原形</th><th>過去形</th><th>過去分詞</th><th>意味</th></tr>
+        <tr><td>go</td><td>went</td><td><strong>gone</strong></td><td>行く</td></tr>
+        <tr><td>come</td><td>came</td><td><strong>come</strong></td><td>来る</td></tr>
+        <tr><td>eat</td><td>ate</td><td><strong>eaten</strong></td><td>食べる</td></tr>
+        <tr><td>see</td><td>saw</td><td><strong>seen</strong></td><td>見る</td></tr>
+        <tr><td>write</td><td>wrote</td><td><strong>written</strong></td><td>書く</td></tr>
+        <tr><td>read</td><td>read</td><td><strong>read</strong></td><td>読む</td></tr>
+        <tr><td>take</td><td>took</td><td><strong>taken</strong></td><td>取る</td></tr>
+        <tr><td>give</td><td>gave</td><td><strong>given</strong></td><td>あげる</td></tr>
+        <tr><td>break</td><td>broke</td><td><strong>broken</strong></td><td>壊す</td></tr>
+        <tr><td>lose</td><td>lost</td><td><strong>lost</strong></td><td>なくす</td></tr>
+        <tr><td>finish</td><td>finished</td><td><strong>finished</strong></td><td>終える</td></tr>
+    </table>
+
+    <div class="point-box">
+        規則動詞（finish → finished）は過去形と過去分詞が同じ形です。<br>
+        不規則動詞は3つの形（原形・過去形・過去分詞）をセットで覚えましょう！
+    </div>
+</div>
+
 <div class="card" id="exercises-24"></div>
 `;
 
@@ -2683,23 +3249,49 @@ lessonContent[25] = `
 
 <div class="card">
     <h2>継続（ずっと〜している）</h2>
+    <p>過去に始まった状態が<strong>今も続いている</strong>ことを表します。日本語では「ずっと〜している」「〜し続けている」と訳します。</p>
     <div class="example-box">
         <div class="en">I <strong>have lived</strong> in Tokyo <strong>for</strong> ten years.</div>
-        <div class="ja">私は10年間東京に住んでいます。</div>
+        <div class="ja">私は10年間（ずっと）東京に住んでいます。</div>
     </div>
     <div class="example-box">
         <div class="en">She <strong>has been</strong> sick <strong>since</strong> yesterday.</div>
         <div class="ja">彼女は昨日からずっと病気です。</div>
     </div>
+    <div class="example-box">
+        <div class="en">He <strong>has worked</strong> at this company <strong>for</strong> five years.</div>
+        <div class="ja">彼はこの会社で5年間働いています。</div>
+    </div>
+    <div class="example-box">
+        <div class="en">We <strong>have known</strong> each other <strong>since</strong> 2015.</div>
+        <div class="ja">私たちは2015年からの知り合いです。</div>
+    </div>
 
     <div class="point-box">
-        <strong>for</strong> = 期間（for two years = 2年間）<br>
-        <strong>since</strong> = 起点（since 2020 = 2020年から）
+        <strong>for</strong> = 期間（for two years = 2年間, for a long time = 長い間）<br>
+        <strong>since</strong> = 起点（since 2020 = 2020年から, since this morning = 今朝から）
+    </div>
+</div>
+
+<div class="card">
+    <h2>継続の疑問文・否定文</h2>
+    <div class="example-box">
+        <div class="en"><strong>Have</strong> you lived here <strong>for</strong> a long time? ─ Yes, I have.</div>
+        <div class="ja">ここに長く住んでいますか？ ─ はい、住んでいます。</div>
+    </div>
+    <div class="example-box">
+        <div class="en">How long <strong>have</strong> you studied English?</div>
+        <div class="ja">英語をどのくらい勉強していますか？</div>
+    </div>
+    <div class="example-box">
+        <div class="en">I <strong>have not seen</strong> him since last week.</div>
+        <div class="ja">先週から彼に会っていません。</div>
     </div>
 </div>
 
 <div class="card">
     <h2>経験（〜したことがある）</h2>
+    <p>今まで（生まれてから今まで）に、その経験があるかどうかを表します。</p>
     <div class="example-box">
         <div class="en">I <strong>have been</strong> to Kyoto <strong>twice</strong>.</div>
         <div class="ja">私は京都に2回行ったことがある。</div>
@@ -2708,15 +3300,67 @@ lessonContent[25] = `
         <div class="en">She <strong>has never eaten</strong> sushi.</div>
         <div class="ja">彼女は一度も寿司を食べたことがない。</div>
     </div>
+    <div class="example-box">
+        <div class="en"><strong>Have</strong> you <strong>ever</strong> climbed Mt. Fuji?</div>
+        <div class="ja">あなたは今までに富士山に登ったことがありますか？</div>
+    </div>
+    <div class="example-box">
+        <div class="en">I <strong>have visited</strong> Paris <strong>three times</strong>.</div>
+        <div class="ja">私はパリに3回訪れたことがあります。</div>
+    </div>
 
     <table>
-        <tr><th>よく使う語</th><th>意味</th></tr>
-        <tr><td>ever</td><td>今までに（疑問文で）</td></tr>
-        <tr><td>never</td><td>一度も〜ない</td></tr>
-        <tr><td>once</td><td>1回</td></tr>
-        <tr><td>twice</td><td>2回</td></tr>
-        <tr><td>three times</td><td>3回</td></tr>
+        <tr><th>よく使う語</th><th>意味</th><th>使う場面</th></tr>
+        <tr><td>ever</td><td>今までに</td><td>疑問文</td></tr>
+        <tr><td>never</td><td>一度も〜ない</td><td>否定文</td></tr>
+        <tr><td>once</td><td>1回</td><td>肯定文</td></tr>
+        <tr><td>twice</td><td>2回</td><td>肯定文</td></tr>
+        <tr><td>three times</td><td>3回</td><td>肯定文</td></tr>
     </table>
+</div>
+
+<div class="card">
+    <h2>have been to vs have gone to</h2>
+    <div class="comparison-box">
+        <div class="jp-order">
+            <h4>have been to（経験）</h4>
+            <p><strong>I have been to London.</strong></p>
+            <p style="color:#718096">ロンドンに行ったことがある。<br>→ 今ここにいる（帰ってきた）</p>
+        </div>
+        <div class="en-order">
+            <h4>have gone to（結果）</h4>
+            <p><strong>He has gone to London.</strong></p>
+            <p style="color:#718096">ロンドンに行ってしまった。<br>→ 今ロンドンにいる（ここにいない）</p>
+        </div>
+    </div>
+
+    <div class="warn-box">
+        ✕ I have gone to London.（自分に対しては使えない！gone to は今そこにいることを意味する）<br>
+        ○ I have been to London.（経験 ─ 自分が使う場合はこちら）
+    </div>
+</div>
+
+<div class="card">
+    <h2>継続 vs 経験の見分け方</h2>
+    <div class="comparison-box">
+        <div class="jp-order">
+            <h4>継続</h4>
+            <p>「ずっと〜し続けている」<br>（状態が今も続く）</p>
+            <p><strong>I have lived here for 5 years.</strong></p>
+            <p style="color:#718096">5年間ここに住んでいる<br>（今も住んでいる）</p>
+        </div>
+        <div class="en-order">
+            <h4>経験</h4>
+            <p>「〜したことがある」<br>（今もやっているとは限らない）</p>
+            <p><strong>I have lived in Tokyo.</strong></p>
+            <p style="color:#718096">東京に住んだことがある<br>（今は住んでいないかも）</p>
+        </div>
+    </div>
+
+    <div class="point-box">
+        継続 → <strong>for / since</strong> がヒント！<br>
+        経験 → <strong>ever / never / once / twice</strong> がヒント！
+    </div>
 </div>
 
 <div class="card" id="exercises-25"></div>
@@ -2731,43 +3375,109 @@ lessonContent[26] = `
 </div>
 
 <div class="card">
-    <h2>分詞の形容詞的用法</h2>
+    <h2>分詞とは？</h2>
+    <p>動詞から作られて、<strong>形容詞のように名詞を修飾</strong>する形です。</p>
     <table>
         <tr><th></th><th>形</th><th>意味</th><th>例</th></tr>
-        <tr><td>現在分詞</td><td>動詞<strong>ing</strong></td><td>〜している（能動）</td><td>a <strong>sleeping</strong> baby（眠っている赤ちゃん）</td></tr>
-        <tr><td>過去分詞</td><td>動詞<strong>ed</strong>/不規則</td><td>〜された（受動）</td><td>a <strong>broken</strong> window（壊された窓）</td></tr>
+        <tr><td><strong>現在分詞</strong></td><td>動詞<strong>-ing</strong></td><td>〜している（能動・進行）</td><td>a <strong>sleeping</strong> baby（眠っている赤ちゃん）</td></tr>
+        <tr><td><strong>過去分詞</strong></td><td>動詞<strong>-ed</strong>/不規則</td><td>〜された（受動・完了）</td><td>a <strong>broken</strong> window（壊れた窓）</td></tr>
     </table>
+
+    <div class="point-box">
+        現在分詞 → 名詞が「〜している」（自ら行動）<br>
+        過去分詞 → 名詞が「〜された」（受け身の状態）
+    </div>
+</div>
+
+<div class="card">
+    <h2>現在分詞の例文</h2>
+    <div class="example-box">
+        <div class="en">Look at the <strong>sleeping</strong> cat.</div>
+        <div class="ja">眠っている猫を見て。</div>
+    </div>
+    <div class="example-box">
+        <div class="en">The woman <strong>standing</strong> by the door is my aunt.</div>
+        <div class="ja">ドアのそばに立っている女性は私の叔母です。</div>
+    </div>
+    <div class="example-box">
+        <div class="en">I saw a boy <strong>running</strong> down the street.</div>
+        <div class="ja">通りを走り下る男の子を見た。</div>
+    </div>
+    <div class="example-box">
+        <div class="en">The girl <strong>singing</strong> on stage is very talented.</div>
+        <div class="ja">ステージで歌っている女の子はとても才能がある。</div>
+    </div>
+</div>
+
+<div class="card">
+    <h2>過去分詞の例文</h2>
+    <div class="example-box">
+        <div class="en">I need to fix the <strong>broken</strong> chair.</div>
+        <div class="ja">壊れた椅子を修理する必要がある。</div>
+    </div>
+    <div class="example-box">
+        <div class="en">This is a camera <strong>made</strong> in Japan.</div>
+        <div class="ja">これは日本製のカメラです。</div>
+    </div>
+    <div class="example-box">
+        <div class="en">The bread <strong>baked</strong> by my mother smells good.</div>
+        <div class="ja">母が焼いたパンはいいにおいがする。</div>
+    </div>
+    <div class="example-box">
+        <div class="en">I found a letter <strong>written</strong> in French.</div>
+        <div class="ja">フランス語で書かれた手紙を見つけた。</div>
+    </div>
 </div>
 
 <div class="card">
     <h2>前から修飾 vs 後ろから修飾</h2>
-    <p>分詞が<strong>1語だけ</strong>のとき → 名詞の前<br>
-    分詞に<strong>他の語がつく</strong>とき → 名詞の後ろ</p>
+    <p>分詞が<strong>1語だけ</strong>のとき → 名詞の<strong>前</strong><br>
+    分詞に<strong>他の語がつく（分詞句）</strong>とき → 名詞の<strong>後ろ</strong></p>
 
-    <div class="example-box">
-        <div class="en">a <strong>running</strong> boy（走っている少年）← 1語 = 前</div>
-        <div class="ja"></div>
-    </div>
-    <div class="example-box">
-        <div class="en">the boy <strong>running in the park</strong>（公園で走っている少年）← 句 = 後ろ</div>
-        <div class="ja"></div>
+    <div class="comparison-box">
+        <div class="jp-order">
+            <h4>1語 → 前に置く</h4>
+            <p>a <strong>running</strong> boy</p>
+            <p style="color:#718096">走っている少年</p>
+            <p>a <strong>broken</strong> window</p>
+            <p style="color:#718096">壊れた窓</p>
+        </div>
+        <div class="en-order">
+            <h4>分詞句 → 後ろに置く</h4>
+            <p>the boy <strong>running in the park</strong></p>
+            <p style="color:#718096">公園で走っている少年</p>
+            <p>the window <strong>broken by the ball</strong></p>
+            <p style="color:#718096">ボールで割られた窓</p>
+        </div>
     </div>
 </div>
 
 <div class="card">
     <h2>感情を表す分詞</h2>
+    <p>感情動詞の現在分詞・過去分詞はよく混同されます。ポイントは「誰が（何が）」の視点です。</p>
     <table>
-        <tr><th>現在分詞（〜させる）</th><th>過去分詞（〜した気持ち）</th></tr>
+        <tr><th>現在分詞（〜させる・引き起こす）</th><th>過去分詞（〜した気持ちの）</th></tr>
         <tr><td><strong>exciting</strong>（ワクワクさせる）</td><td><strong>excited</strong>（ワクワクした）</td></tr>
-        <tr><td><strong>interesting</strong>（面白い）</td><td><strong>interested</strong>（興味がある）</td></tr>
+        <tr><td><strong>interesting</strong>（面白い・興味深い）</td><td><strong>interested</strong>（興味がある）</td></tr>
         <tr><td><strong>surprising</strong>（驚かせる）</td><td><strong>surprised</strong>（驚いた）</td></tr>
         <tr><td><strong>boring</strong>（退屈させる）</td><td><strong>bored</strong>（退屈した）</td></tr>
         <tr><td><strong>tiring</strong>（疲れさせる）</td><td><strong>tired</strong>（疲れた）</td></tr>
+        <tr><td><strong>satisfying</strong>（満足させる）</td><td><strong>satisfied</strong>（満足した）</td></tr>
     </table>
 
     <div class="example-box">
         <div class="en">The game was <strong>exciting</strong>. I was <strong>excited</strong>.</div>
         <div class="ja">その試合はワクワクするものだった。私はワクワクした。</div>
+    </div>
+    <div class="example-box">
+        <div class="en">This movie is <strong>boring</strong>. I'm <strong>bored</strong>.</div>
+        <div class="ja">この映画は退屈だ。私は退屈している。</div>
+    </div>
+
+    <div class="warn-box">
+        ✕ I am very interesting in music.（モノに使う語を人に！）<br>
+        ○ I am very <strong>interested</strong> in music.（人の気持ち → 過去分詞）<br>
+        ○ This topic is very <strong>interesting</strong>.（もの・こと → 現在分詞）
     </div>
 </div>
 
@@ -2784,11 +3494,11 @@ lessonContent[27] = `
 
 <div class="card">
     <h2>関係代名詞とは？</h2>
-    <p>2つの文を1つにまとめて、名詞をくわしく説明する働きをします。</p>
+    <p>2つの文を1つにまとめて、<strong>名詞をくわしく説明する</strong>働きをします。「接続詞」と「代名詞」の両方の役割を持ちます。</p>
 
     <div class="example-box">
         <div class="en">I have a friend. + He lives in America.</div>
-        <div class="ja">↓ who でつなぐ</div>
+        <div class="ja">↓ He（人）を who に変えてつなぐ</div>
     </div>
     <div class="example-box">
         <div class="en">I have a friend <strong>who lives in America</strong>.</div>
@@ -2796,32 +3506,95 @@ lessonContent[27] = `
     </div>
 
     <table>
-        <tr><th></th><th>人</th><th>もの・動物</th></tr>
-        <tr><td>主格</td><td><strong>who</strong></td><td><strong>which</strong></td></tr>
-        <tr><td>目的格</td><td><strong>who(m)</strong></td><td><strong>which</strong></td></tr>
-        <tr><td>両方OK</td><td colspan="2"><strong>that</strong></td></tr>
+        <tr><th>先行詞</th><th>主格（〜が）</th><th>目的格（〜を/に）</th></tr>
+        <tr><td>人</td><td><strong>who</strong></td><td><strong>who(m)</strong></td></tr>
+        <tr><td>もの・動物</td><td><strong>which</strong></td><td><strong>which</strong></td></tr>
+        <tr><td>人・もの両方</td><td><strong>that</strong></td><td><strong>that</strong>（省略可）</td></tr>
     </table>
+
+    <div class="point-box">
+        <strong>先行詞</strong>とは、関係代名詞が説明する名詞のことです（who / which の前にある名詞）。
+    </div>
 </div>
 
 <div class="card">
-    <h2>主格の関係代名詞</h2>
-    <p>関係代名詞が後ろの文の<strong>主語</strong>の役割をする場合</p>
+    <h2>主格の関係代名詞（後ろに動詞が来る）</h2>
+    <p>関係代名詞が後ろの文の<strong>主語</strong>の役割をします。後ろには必ず<strong>動詞</strong>が来ます。</p>
+
+    <h3>who（人が先行詞）</h3>
     <div class="example-box">
-        <div class="en">The man <strong>who</strong> is standing there is my father.</div>
+        <div class="en">The man <strong>who is standing there</strong> is my father.</div>
         <div class="ja">あそこに立っている男性は私の父です。</div>
     </div>
     <div class="example-box">
-        <div class="en">This is the book <strong>which</strong> made me happy.</div>
+        <div class="en">I know a girl <strong>who can speak Spanish</strong>.</div>
+        <div class="ja">スペイン語が話せる女の子を知っています。</div>
+    </div>
+    <div class="example-box">
+        <div class="en">She is the teacher <strong>who helped me</strong>.</div>
+        <div class="ja">彼女は私を助けてくれた先生です。</div>
+    </div>
+
+    <h3>which（もの・動物が先行詞）</h3>
+    <div class="example-box">
+        <div class="en">This is the book <strong>which made me happy</strong>.</div>
         <div class="ja">これは私を幸せにしてくれた本です。</div>
+    </div>
+    <div class="example-box">
+        <div class="en">I have a dog <strong>which runs very fast</strong>.</div>
+        <div class="ja">私はとても速く走る犬を飼っています。</div>
+    </div>
+
+    <div class="point-box">
+        that は人・ものどちらにも使えます！<br>
+        The man <strong>that</strong> lives next door is kind.（人）<br>
+        This is the bag <strong>that</strong> I want.（もの）
     </div>
 </div>
 
 <div class="card">
-    <h2>目的格の関係代名詞</h2>
-    <p>関係代名詞が後ろの文の<strong>目的語</strong>の役割をする場合（省略可能！）</p>
+    <h2>目的格の関係代名詞（後ろに主語+動詞が来る）</h2>
+    <p>関係代名詞が後ろの文の<strong>目的語</strong>の役割をします。<strong>省略可能</strong>なのが特徴です！</p>
+
     <div class="example-box">
-        <div class="en">The movie <strong>(which/that)</strong> I watched yesterday was good.</div>
-        <div class="ja">昨日見た映画はよかった。（which/that は省略可）</div>
+        <div class="en">The movie <strong>which/that I watched</strong> yesterday was good.</div>
+        <div class="ja">昨日私が見た映画はよかった。</div>
+    </div>
+    <div class="example-box">
+        <div class="en">The bag <strong>(which) she bought</strong> was expensive.</div>
+        <div class="ja">彼女が買ったカバンは高かった。（which は省略可）</div>
+    </div>
+    <div class="example-box">
+        <div class="en">The man <strong>(who/whom) I met</strong> at the party was Tom.</div>
+        <div class="ja">パーティーで会った男性はトムでした。</div>
+    </div>
+    <div class="example-box">
+        <div class="en">This is the song <strong>(that) I love</strong> the most.</div>
+        <div class="ja">これは私が一番好きな曲です。</div>
+    </div>
+</div>
+
+<div class="card">
+    <h2>主格 vs 目的格の見分け方</h2>
+    <div class="comparison-box">
+        <div class="jp-order">
+            <h4>主格</h4>
+            <p>関係代名詞の<strong>後ろに動詞</strong><br>（省略できない）</p>
+            <p><strong>The boy who runs fast</strong> is Ken.</p>
+            <p style="color:#718096">who → runs（動詞）</p>
+        </div>
+        <div class="en-order">
+            <h4>目的格</h4>
+            <p>関係代名詞の<strong>後ろに主語+動詞</strong><br>（省略できる）</p>
+            <p><strong>The book (which) I read</strong> was great.</p>
+            <p style="color:#718096">which → I（主語）read（動詞）</p>
+        </div>
+    </div>
+
+    <div class="warn-box">
+        目的格の関係代名詞の後ろには<strong>必ず「主語+動詞」</strong>が続きます！<br>
+        ✕ The book which was read by me（これは主格の which）<br>
+        ○ The book <strong>which I read</strong>（これが目的格の which）
     </div>
 </div>
 
@@ -2978,15 +3751,64 @@ lessonContent[29] = `
 </div>
 
 <div class="card">
-    <h2>実践例</h2>
+    <h2>実践例①　関係代名詞がある文</h2>
     <div class="example-box">
         <div class="en">The book <strong>[which I bought (at the store) (last week)]</strong> was very interesting.</div>
         <div class="ja">
             S = The book / V = was / C = very interesting<br>
-            which I bought = 私が買った（関係代名詞）<br>
+            which I bought = 私が買った（関係代名詞・目的格）<br>
             at the store = お店で / last week = 先週<br>
             <strong>→ 先週お店で私が買った本はとても面白かった。</strong>
         </div>
+    </div>
+</div>
+
+<div class="card">
+    <h2>実践例②　不定詞がある文</h2>
+    <div class="example-box">
+        <div class="en">I have a lot of things <strong>(to do today)</strong>.</div>
+        <div class="ja">
+            S = I / V = have / O = a lot of things<br>
+            to do today = 今日やるべき（形容詞的用法：thingsを修飾）<br>
+            <strong>→ 私は今日やるべきことがたくさんある。</strong>
+        </div>
+    </div>
+    <div class="example-box">
+        <div class="en">She studied hard <strong>(to pass the exam)</strong>.</div>
+        <div class="ja">
+            S = She / V = studied / M = hard<br>
+            to pass the exam = 試験に合格するために（副詞的用法：目的）<br>
+            <strong>→ 彼女は試験に合格するために一生懸命勉強した。</strong>
+        </div>
+    </div>
+</div>
+
+<div class="card">
+    <h2>実践例③　現在完了形の文</h2>
+    <div class="example-box">
+        <div class="en">I <strong>have just finished</strong> the report that my boss asked me to write.</div>
+        <div class="ja">
+            S = I / V = have just finished（現在完了形・完了）<br>
+            O = the report<br>
+            that my boss asked me to write = 上司が私に書くよう頼んだ（関係代名詞）<br>
+            <strong>→ 上司に頼まれて書いていたレポートをちょうど終えた。</strong>
+        </div>
+    </div>
+</div>
+
+<div class="card">
+    <h2>長文読解のコツ：まとめ</h2>
+    <table>
+        <tr><th>ポイント</th><th>コツ</th></tr>
+        <tr><td>S と V を見つける</td><td>主語は文頭、動詞はその直後に多い。修飾語を除いて考える</td></tr>
+        <tr><td>修飾語をくくる</td><td>前置詞句（in, of, at...）・関係代名詞節・分詞句をカッコでくくる</td></tr>
+        <tr><td>接続詞に注目</td><td>when, because, if, that, which など節の切れ目のサイン</td></tr>
+        <tr><td>文型を意識する</td><td>動詞の後に何が来るかで意味が変わる（SVO/SVC/SVOO...）</td></tr>
+        <tr><td>前から読む習慣</td><td>最後まで読んでから戻らず、前から意味を取っていく</td></tr>
+    </table>
+
+    <div class="point-box">
+        完璧な訳より「意味が取れる」ことを優先！まず大意をつかんで、細部は後から確認する。
     </div>
 </div>
 
