@@ -3997,6 +3997,13 @@ function showLesson(key) {
     if (key.startsWith('lesson-')) {
         var lessonId = parseInt(key.split('-')[1]);
         injectRandomExercises(lessonId);
+
+        // 単語帳ボタンをコンテンツ先頭に挿入
+        var vocabBtn = document.createElement('button');
+        vocabBtn.className = 'vocab-btn';
+        vocabBtn.innerHTML = '📖 単語帳';
+        vocabBtn.onclick = function() { renderVocabModal(lessonId); };
+        contentEl.insertBefore(vocabBtn, contentEl.firstChild);
     }
 
     // 音声ボタン自動挿入
@@ -4853,6 +4860,42 @@ function skipConvLine() {
 
 function resetConversation() {
     loadConversation();
+}
+
+// ============================================================
+// レッスン検索フィルター
+// ============================================================
+function filterLessons(query) {
+    var q = query.trim().toLowerCase();
+    var container = document.getElementById('lesson-list-container');
+    if (!container) return;
+
+    // stage-label と lesson-list を交互に走査
+    var nodes = container.children;
+    var lastStageEl = null;
+    var stageHasVisible = false;
+
+    for (var i = 0; i < nodes.length; i++) {
+        var el = nodes[i];
+        if (el.classList.contains('stage-label')) {
+            // 前のステージの表示/非表示を確定
+            if (lastStageEl) {
+                lastStageEl.classList.toggle('hidden', !stageHasVisible);
+            }
+            lastStageEl = el;
+            stageHasVisible = false;
+        } else if (el.classList.contains('lesson-list')) {
+            var btn = el.querySelector('button');
+            var text = btn ? btn.textContent.toLowerCase() : '';
+            var match = !q || text.includes(q);
+            el.classList.toggle('hidden', !match);
+            if (match) stageHasVisible = true;
+        }
+    }
+    // 最後のステージを確定
+    if (lastStageEl) {
+        lastStageEl.classList.toggle('hidden', !stageHasVisible);
+    }
 }
 
 // ============================================================

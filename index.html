@@ -33,6 +33,14 @@
     <div class="lesson-layout">
         <div class="lesson-sidebar">
             <div class="card">
+                <div class="lesson-search-wrap">
+                    <input
+                        id="lesson-search"
+                        type="search"
+                        placeholder="🔍 レッスンを検索..."
+                        oninput="filterLessons(this.value)"
+                    >
+                </div>
                 <div id="lesson-list-container"></div>
             </div>
         </div>
@@ -246,6 +254,7 @@
     <p>英語学習ガイド - あきらめなければ、必ず話せるようになる！</p>
 </footer>
 
+<script src="api.js"></script>
 <script src="script.js"></script>
 
 <!-- PWA Service Worker 登録 -->
