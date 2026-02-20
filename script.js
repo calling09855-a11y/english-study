@@ -1735,41 +1735,78 @@ lessonContent[17] = `
 </div>
 
 <div class="card">
-    <h2>不定詞の3つの用法</h2>
+    <h2>不定詞とは？</h2>
+    <p><strong>to + 動詞の原形</strong> を「不定詞」と呼びます。不定詞には3つの用法があります。</p>
     <table>
         <tr><th>用法</th><th>意味</th><th>例文</th></tr>
         <tr><td><strong>名詞的用法</strong></td><td>〜すること</td><td>I like <strong>to read</strong> books.</td></tr>
         <tr><td><strong>副詞的用法</strong></td><td>〜するために</td><td>I went to the library <strong>to study</strong>.</td></tr>
         <tr><td><strong>形容詞的用法</strong></td><td>〜するための</td><td>I want something <strong>to drink</strong>.</td></tr>
     </table>
+
+    <div class="point-box">
+        to の後は必ず<strong>動詞の原形</strong>です。to の後に -ing や -ed はつきません。
+    </div>
 </div>
 
 <div class="card">
     <h2>名詞的用法（〜すること）</h2>
+    <p>名詞と同じように、<strong>主語・目的語・補語</strong>の位置で使えます。</p>
     <div class="example-box">
         <div class="en"><strong>To study</strong> English is important.</div>
-        <div class="ja">英語を勉強することは大切です。</div>
+        <div class="ja">英語を勉強することは大切です。（主語）</div>
     </div>
     <div class="example-box">
         <div class="en">I want <strong>to be</strong> a doctor.</div>
-        <div class="ja">私は医者になりたいです。</div>
+        <div class="ja">私は医者になりたいです。（目的語）</div>
+    </div>
+    <div class="example-box">
+        <div class="en">My dream is <strong>to travel</strong> around the world.</div>
+        <div class="ja">私の夢は世界中を旅することです。（補語）</div>
+    </div>
+    <div class="example-box">
+        <div class="en">I began <strong>to learn</strong> English last year.</div>
+        <div class="ja">去年英語を学び始めた。（目的語）</div>
     </div>
 </div>
 
 <div class="card">
-    <h2>副詞的用法（〜するために）</h2>
+    <h2>副詞的用法（〜するために / 〜して）</h2>
+    <p>「目的」や「感情の原因」を表します。</p>
+
+    <h3>目的（〜するために）</h3>
     <div class="example-box">
         <div class="en">She went to the store <strong>to buy</strong> milk.</div>
         <div class="ja">彼女は牛乳を買うためにお店に行った。</div>
     </div>
     <div class="example-box">
-        <div class="en">I'm happy <strong>to hear</strong> that.（感情の原因）</div>
+        <div class="en">I got up early <strong>to catch</strong> the train.</div>
+        <div class="ja">電車に乗るために早く起きた。</div>
+    </div>
+    <div class="example-box">
+        <div class="en">He studied hard <strong>to pass</strong> the test.</div>
+        <div class="ja">テストに受かるために一生懸命勉強した。</div>
+    </div>
+
+    <h3>感情の原因（〜して）</h3>
+    <div class="example-box">
+        <div class="en">I'm happy <strong>to hear</strong> that.</div>
         <div class="ja">それを聞いて嬉しいです。</div>
+    </div>
+    <div class="example-box">
+        <div class="en">She was surprised <strong>to see</strong> him.</div>
+        <div class="ja">彼女は彼を見て驚いた。</div>
+    </div>
+
+    <div class="point-box">
+        「なぜ？」と聞かれたときの理由が <strong>to + 動詞</strong> → 副詞的用法<br>
+        Why did you go? → <strong>To buy</strong> milk.（牛乳を買うために）
     </div>
 </div>
 
 <div class="card">
     <h2>形容詞的用法（〜するための）</h2>
+    <p>名詞の後ろに置いて、その名詞を説明します。</p>
     <div class="example-box">
         <div class="en">I have a lot of homework <strong>to do</strong>.</div>
         <div class="ja">私にはやるべき宿題がたくさんある。</div>
@@ -1777,6 +1814,34 @@ lessonContent[17] = `
     <div class="example-box">
         <div class="en">I need something <strong>to eat</strong>.</div>
         <div class="ja">何か食べるものが必要です。</div>
+    </div>
+    <div class="example-box">
+        <div class="en">I want a place <strong>to live</strong>.</div>
+        <div class="ja">住む場所がほしい。</div>
+    </div>
+    <div class="example-box">
+        <div class="en">Is there anything <strong>to drink</strong>?</div>
+        <div class="ja">何か飲むものはありますか？</div>
+    </div>
+</div>
+
+<div class="card">
+    <h2>3つの用法の見分け方</h2>
+    <div class="comparison-box">
+        <div class="jp-order">
+            <h4>見分けのコツ</h4>
+            <p style="color:#718096">
+                1. <strong>名詞的用法</strong>：「〜すること」で意味が通る<br>
+                2. <strong>副詞的用法</strong>：「〜するために」「〜して」で意味が通る<br>
+                3. <strong>形容詞的用法</strong>：「〜するための〇〇」で直前の名詞を説明
+            </p>
+        </div>
+        <div class="en-order">
+            <h4>例文で確認</h4>
+            <p><strong>To read</strong> is fun.（名詞的）</p>
+            <p>I came <strong>to see</strong> you.（副詞的）</p>
+            <p>I want time <strong>to rest</strong>.（形容詞的）</p>
+        </div>
     </div>
 </div>
 
@@ -1796,16 +1861,42 @@ lessonContent[18] = `
     <p>動詞に <strong>-ing</strong> をつけて「〜すること」という名詞の働きをさせます。</p>
     <div class="example-box">
         <div class="en"><strong>Swimming</strong> is fun.</div>
-        <div class="ja">泳ぐことは楽しい。</div>
+        <div class="ja">泳ぐことは楽しい。（主語として）</div>
     </div>
     <div class="example-box">
         <div class="en">I enjoy <strong>playing</strong> tennis.</div>
-        <div class="ja">テニスをすることを楽しむ。</div>
+        <div class="ja">テニスをすることを楽しむ。（目的語として）</div>
+    </div>
+    <div class="example-box">
+        <div class="en">My hobby is <strong>reading</strong> books.</div>
+        <div class="ja">私の趣味は本を読むことです。（補語として）</div>
+    </div>
+
+    <div class="point-box">
+        動名詞は<strong>主語・目的語・補語</strong>の位置に置けます。名詞と同じ働きをするから「動名詞」と呼びます。
+    </div>
+</div>
+
+<div class="card">
+    <h2>不定詞の名詞的用法（復習）</h2>
+    <p><strong>to + 動詞の原形</strong>でも「〜すること」を表せます。動名詞と同じ意味になる場合が多いです。</p>
+    <div class="comparison-box">
+        <div class="jp-order">
+            <h4>動名詞</h4>
+            <p><strong>Swimming</strong> is fun.</p>
+            <p style="color:#718096">泳ぐことは楽しい。</p>
+        </div>
+        <div class="en-order">
+            <h4>不定詞</h4>
+            <p><strong>To swim</strong> is fun.</p>
+            <p style="color:#718096">泳ぐことは楽しい。</p>
+        </div>
     </div>
 </div>
 
 <div class="card">
     <h2>動名詞のみをとる動詞・不定詞のみをとる動詞</h2>
+    <p>ここが最重要！動詞によって後ろに -ing がくるか to がくるかが決まっています。</p>
     <table>
         <tr><th>動名詞のみ（-ing）</th><th>不定詞のみ（to）</th><th>どちらもOK</th></tr>
         <tr><td>enjoy（楽しむ）</td><td>want（欲しい）</td><td>like（好き）</td></tr>
@@ -1823,6 +1914,65 @@ lessonContent[18] = `
     </div>
 </div>
 
+<div class="card">
+    <h2>動名詞のみの動詞 ─ 例文</h2>
+    <div class="example-box">
+        <div class="en">I <strong>finished reading</strong> the book.</div>
+        <div class="ja">私はその本を読み終えた。</div>
+    </div>
+    <div class="example-box">
+        <div class="en">She <strong>practiced singing</strong> every day.</div>
+        <div class="ja">彼女は毎日歌の練習をした。</div>
+    </div>
+    <div class="example-box">
+        <div class="en">Would you <strong>mind opening</strong> the window?</div>
+        <div class="ja">窓を開けていただけますか？</div>
+    </div>
+
+    <div class="point-box">
+        動名詞のみの動詞は語呂で覚えよう！<br>
+        <strong>「メガフェプス」</strong>= <strong>M</strong>ind, <strong>E</strong>njoy, <strong>G</strong>ive up, <strong>A</strong>void, <strong>F</strong>inish, <strong>E</strong>scape, <strong>P</strong>ractice, <strong>S</strong>top
+    </div>
+</div>
+
+<div class="card">
+    <h2>不定詞のみの動詞 ─ 例文</h2>
+    <div class="example-box">
+        <div class="en">I <strong>want to visit</strong> Kyoto.</div>
+        <div class="ja">京都を訪れたい。</div>
+    </div>
+    <div class="example-box">
+        <div class="en">She <strong>decided to study</strong> abroad.</div>
+        <div class="ja">彼女は留学することを決めた。</div>
+    </div>
+    <div class="example-box">
+        <div class="en">I <strong>hope to see</strong> you again.</div>
+        <div class="ja">また会えるといいな。</div>
+    </div>
+</div>
+
+<div class="card">
+    <h2>前置詞 + 動名詞</h2>
+    <p>前置詞の後ろには名詞が来るので、動詞を置きたいときは<strong>動名詞（-ing）</strong>にします。</p>
+    <div class="example-box">
+        <div class="en">Thank you <strong>for helping</strong> me.</div>
+        <div class="ja">手伝ってくれてありがとう。</div>
+    </div>
+    <div class="example-box">
+        <div class="en">I'm interested <strong>in learning</strong> English.</div>
+        <div class="ja">英語を学ぶことに興味がある。</div>
+    </div>
+    <div class="example-box">
+        <div class="en">How about <strong>going</strong> to the park?</div>
+        <div class="ja">公園に行くのはどう？</div>
+    </div>
+
+    <div class="warn-box">
+        ✕ Thank you for <strong>to help</strong> me.（前置詞の後に to は来ない！）<br>
+        ○ Thank you for <strong>helping</strong> me.
+    </div>
+</div>
+
 <div class="card" id="exercises-18"></div>
 `;
 
@@ -1835,6 +1985,16 @@ lessonContent[19] = `
 </div>
 
 <div class="card">
+    <h2>接続詞とは？</h2>
+    <p>接続詞は<strong>文と文、語と語をつなぐ</strong>言葉です。大きく2種類あります。</p>
+    <table>
+        <tr><th>種類</th><th>働き</th><th>代表例</th></tr>
+        <tr><td>等位接続詞</td><td>対等な関係でつなぐ</td><td>and, but, or, so</td></tr>
+        <tr><td>従位接続詞</td><td>主従の関係でつなぐ</td><td>when, if, because, that</td></tr>
+    </table>
+</div>
+
+<div class="card">
     <h2>等位接続詞（対等につなぐ）</h2>
     <table>
         <tr><th>接続詞</th><th>意味</th><th>例文</th></tr>
@@ -1843,24 +2003,101 @@ lessonContent[19] = `
         <tr><td><strong>or</strong></td><td>または</td><td>Coffee <strong>or</strong> tea?</td></tr>
         <tr><td><strong>so</strong></td><td>だから</td><td>It was cold, <strong>so</strong> I wore a coat.</td></tr>
     </table>
+
+    <div class="example-box">
+        <div class="en">I got up early <strong>and</strong> went to school.</div>
+        <div class="ja">私は早く起きて学校に行った。</div>
+    </div>
+    <div class="example-box">
+        <div class="en">She studied hard, <strong>but</strong> she didn't pass the test.</div>
+        <div class="ja">彼女は一生懸命勉強したが、テストに合格しなかった。</div>
+    </div>
+    <div class="example-box">
+        <div class="en">Hurry up, <strong>or</strong> you'll be late.</div>
+        <div class="ja">急ぎなさい、さもないと遅れるよ。</div>
+    </div>
 </div>
 
 <div class="card">
-    <h2>従位接続詞（文に文をつなぐ）</h2>
+    <h2>when / if / because（従位接続詞）</h2>
+    <p>従位接続詞は<strong>理由・条件・時</strong>などを表す文をつなぎます。</p>
+
+    <h3>when（〜のとき）</h3>
+    <div class="example-box">
+        <div class="en"><strong>When</strong> I was young, I liked soccer.</div>
+        <div class="ja">若いとき、サッカーが好きだった。</div>
+    </div>
+    <div class="example-box">
+        <div class="en">I was reading <strong>when</strong> he came home.</div>
+        <div class="ja">彼が帰ってきたとき、私は本を読んでいた。</div>
+    </div>
+
+    <h3>if（もし〜なら）</h3>
+    <div class="example-box">
+        <div class="en"><strong>If</strong> it rains, I will stay home.</div>
+        <div class="ja">もし雨が降ったら、家にいます。</div>
+    </div>
+    <div class="example-box">
+        <div class="en"><strong>If</strong> you are free, let's play together.</div>
+        <div class="ja">もし暇なら、一緒に遊ぼう。</div>
+    </div>
+
+    <h3>because（〜なので）</h3>
+    <div class="example-box">
+        <div class="en">I stayed home <strong>because</strong> I was sick.</div>
+        <div class="ja">病気だったので家にいた。</div>
+    </div>
+    <div class="example-box">
+        <div class="en"><strong>Because</strong> it was hot, I opened the window.</div>
+        <div class="ja">暑かったので窓を開けた。</div>
+    </div>
+
+    <div class="point-box">
+        接続詞の節が文の<strong>最初</strong>に来るときは、<strong>カンマ（,）</strong>をつけます。<br>
+        <strong>When</strong> I was young<strong>,</strong> I liked soccer.（カンマあり）<br>
+        I liked soccer <strong>when</strong> I was young.（カンマなし）
+    </div>
+</div>
+
+<div class="card">
+    <h2>before / after / while</h2>
     <table>
         <tr><th>接続詞</th><th>意味</th><th>例文</th></tr>
-        <tr><td><strong>when</strong></td><td>〜のとき</td><td><strong>When</strong> I was young, I liked soccer.</td></tr>
-        <tr><td><strong>if</strong></td><td>もし〜なら</td><td><strong>If</strong> it rains, I will stay home.</td></tr>
-        <tr><td><strong>because</strong></td><td>〜なので</td><td>I stayed home <strong>because</strong> I was sick.</td></tr>
         <tr><td><strong>before</strong></td><td>〜の前に</td><td>Wash your hands <strong>before</strong> you eat.</td></tr>
         <tr><td><strong>after</strong></td><td>〜の後に</td><td><strong>After</strong> I ate dinner, I watched TV.</td></tr>
         <tr><td><strong>while</strong></td><td>〜の間</td><td><strong>While</strong> I was sleeping, he called.</td></tr>
-        <tr><td><strong>that</strong></td><td>〜ということ</td><td>I think <strong>that</strong> he is kind.</td></tr>
     </table>
 
+    <div class="example-box">
+        <div class="en">Please finish your homework <strong>before</strong> you go out.</div>
+        <div class="ja">外に出る前に宿題を終わらせなさい。</div>
+    </div>
+    <div class="example-box">
+        <div class="en"><strong>While</strong> she was cooking, the phone rang.</div>
+        <div class="ja">彼女が料理をしている間に電話が鳴った。</div>
+    </div>
+</div>
+
+<div class="card">
+    <h2>that（〜ということ）</h2>
+    <p>think, know, hope などの動詞の後に <strong>that + 文</strong> で「〜ということ」を表します。</p>
+
+    <div class="example-box">
+        <div class="en">I think <strong>that</strong> he is kind.</div>
+        <div class="ja">彼は親切だと思います。</div>
+    </div>
+    <div class="example-box">
+        <div class="en">I hope <strong>that</strong> you will come.</div>
+        <div class="ja">あなたが来てくれるといいな。</div>
+    </div>
+    <div class="example-box">
+        <div class="en">She knows <strong>that</strong> I like music.</div>
+        <div class="ja">彼女は私が音楽が好きだと知っている。</div>
+    </div>
+
     <div class="point-box">
-        接続詞の節が文の最初に来るときは、<strong>カンマ（,）</strong>をつけます。<br>
-        When I was young<strong>,</strong> I liked soccer.
+        that は省略できます。<br>
+        I think <strong>(that)</strong> he is kind. = I think he is kind.
     </div>
 </div>
 
@@ -1877,7 +2114,15 @@ lessonContent[20] = `
 
 <div class="card">
     <h2>比較級（〜より…だ）</h2>
-    <p>2つのものを比べるとき、形容詞/副詞に <strong>-er</strong> をつけるか <strong>more</strong> をつけます。</p>
+    <p>2つのものを比べるとき、形容詞/副詞に <strong>-er</strong> をつけるか <strong>more</strong> をつけて、後ろに <strong>than</strong> を置きます。</p>
+    <div class="word-order">
+        <div class="word-block subject">A</div>
+        <div class="word-block arrow">→</div>
+        <div class="word-block verb">is/am/are</div>
+        <div class="word-block arrow">→</div>
+        <div class="word-block complement">比較級 + than B</div>
+    </div>
+
     <div class="example-box">
         <div class="en">He is <strong>taller than</strong> me.</div>
         <div class="ja">彼は私より背が高い。</div>
@@ -1886,11 +2131,27 @@ lessonContent[20] = `
         <div class="en">English is <strong>more difficult than</strong> math.</div>
         <div class="ja">英語は数学より難しい。</div>
     </div>
+    <div class="example-box">
+        <div class="en">She runs <strong>faster than</strong> him.</div>
+        <div class="ja">彼女は彼より速く走る。</div>
+    </div>
+    <div class="example-box">
+        <div class="en">Tokyo is <strong>bigger than</strong> Osaka.</div>
+        <div class="ja">東京は大阪より大きい。</div>
+    </div>
 </div>
 
 <div class="card">
     <h2>最上級（最も〜だ）</h2>
-    <p>3つ以上の中で一番のとき、<strong>-est</strong> か <strong>most</strong> をつけ、前に <strong>the</strong> をつけます。</p>
+    <p>3つ以上の中で一番のとき、<strong>the + -est</strong> か <strong>the most</strong> をつけます。</p>
+    <div class="word-order">
+        <div class="word-block subject">A</div>
+        <div class="word-block arrow">→</div>
+        <div class="word-block verb">is/am/are</div>
+        <div class="word-block arrow">→</div>
+        <div class="word-block complement">the 最上級 + in/of ~</div>
+    </div>
+
     <div class="example-box">
         <div class="en">She is <strong>the tallest</strong> in the class.</div>
         <div class="ja">彼女はクラスで一番背が高い。</div>
@@ -1898,6 +2159,15 @@ lessonContent[20] = `
     <div class="example-box">
         <div class="en">This is <strong>the most beautiful</strong> park in the city.</div>
         <div class="ja">これは市内で最も美しい公園です。</div>
+    </div>
+    <div class="example-box">
+        <div class="en">Mt. Fuji is <strong>the highest</strong> mountain in Japan.</div>
+        <div class="ja">富士山は日本で一番高い山です。</div>
+    </div>
+
+    <div class="point-box">
+        <strong>in</strong> ＝ 場所・グループ（in the class, in Japan）<br>
+        <strong>of</strong> ＝ 数・集合（of all, of the three）
     </div>
 </div>
 
@@ -1908,11 +2178,40 @@ lessonContent[20] = `
         <tr><td>短い語（1音節）</td><td>tall</td><td>tall<strong>er</strong></td><td>tall<strong>est</strong></td></tr>
         <tr><td>eで終わる</td><td>large</td><td>larg<strong>er</strong></td><td>larg<strong>est</strong></td></tr>
         <tr><td>子音+y</td><td>easy</td><td>eas<strong>ier</strong></td><td>eas<strong>iest</strong></td></tr>
+        <tr><td>短母音+子音</td><td>big</td><td>big<strong>ger</strong></td><td>big<strong>gest</strong></td></tr>
         <tr><td>長い語（2音節以上）</td><td>beautiful</td><td><strong>more</strong> beautiful</td><td><strong>most</strong> beautiful</td></tr>
         <tr><td>不規則</td><td>good / well</td><td><strong>better</strong></td><td><strong>best</strong></td></tr>
         <tr><td>不規則</td><td>bad</td><td><strong>worse</strong></td><td><strong>worst</strong></td></tr>
         <tr><td>不規則</td><td>many / much</td><td><strong>more</strong></td><td><strong>most</strong></td></tr>
     </table>
+
+    <div class="warn-box">
+        ✕ <strong>more taller</strong> than me（-er と more は両方使わない！）<br>
+        ○ <strong>taller</strong> than me<br>
+        ✕ <strong>most beautifulest</strong>（-est と most は両方使わない！）<br>
+        ○ <strong>the most beautiful</strong>
+    </div>
+</div>
+
+<div class="card">
+    <h2>比較級・最上級を使った疑問文</h2>
+    <div class="example-box">
+        <div class="en"><strong>Which</strong> is bigger, Tokyo <strong>or</strong> Osaka?</div>
+        <div class="ja">東京と大阪、どちらが大きいですか？</div>
+    </div>
+    <div class="example-box">
+        <div class="en"><strong>Who</strong> is <strong>the tallest</strong> in your family?</div>
+        <div class="ja">あなたの家族で一番背が高いのは誰？</div>
+    </div>
+    <div class="example-box">
+        <div class="en"><strong>What</strong> is <strong>the longest</strong> river in the world?</div>
+        <div class="ja">世界で一番長い川は何ですか？</div>
+    </div>
+
+    <div class="point-box">
+        2つの比較 → <strong>Which is + 比較級, A or B?</strong><br>
+        3つ以上の比較 → <strong>What/Who is the + 最上級 + in/of ~?</strong>
+    </div>
 </div>
 
 <div class="card" id="exercises-20"></div>
@@ -1923,28 +2222,112 @@ lessonContent[21] = `
 <div class="lesson-header">
     <span class="lesson-tag">Stage 4 ─ 中学2年レベル</span>
     <h2>Lesson 21：比較の表現その2 比較のいろいろ</h2>
-    <p>as...as、like/different from など比較の応用表現を学びます</p>
+    <p>as...as、like better、one of the 最上級 など比較の応用表現を学びます</p>
 </div>
 
 <div class="card">
     <h2>as ... as（同じくらい〜）</h2>
+    <p><strong>as + 形容詞/副詞 + as</strong> で「〜と同じくらい…」を表します。</p>
+    <div class="word-order">
+        <div class="word-block subject">A</div>
+        <div class="word-block arrow">→</div>
+        <div class="word-block verb">is/am/are</div>
+        <div class="word-block arrow">→</div>
+        <div class="word-block complement">as 形容詞 as B</div>
+    </div>
+
     <div class="example-box">
         <div class="en">She is <strong>as tall as</strong> her mother.</div>
         <div class="ja">彼女は母親と同じくらいの背の高さです。</div>
     </div>
     <div class="example-box">
-        <div class="en">He doesn't run <strong>as fast as</strong> Tom.（否定 = 〜ほど…ない）</div>
-        <div class="ja">彼はトムほど速く走らない。</div>
+        <div class="en">Tom is <strong>as old as</strong> Ken.</div>
+        <div class="ja">トムはケンと同じ年齢です。</div>
+    </div>
+    <div class="example-box">
+        <div class="en">This bag is <strong>as expensive as</strong> that one.</div>
+        <div class="ja">このバッグはあのバッグと同じくらい高い。</div>
     </div>
 </div>
 
 <div class="card">
-    <h2>比較を使った重要表現</h2>
+    <h2>not as ... as（〜ほど…ない）</h2>
+    <p>否定文にすると「〜ほど…ではない」という意味になります。</p>
+
+    <div class="example-box">
+        <div class="en">He doesn't run <strong>as fast as</strong> Tom.</div>
+        <div class="ja">彼はトムほど速く走らない。</div>
+    </div>
+    <div class="example-box">
+        <div class="en">This test is <strong>not as difficult as</strong> the last one.</div>
+        <div class="ja">このテストは前回ほど難しくない。</div>
+    </div>
+    <div class="example-box">
+        <div class="en">My house is <strong>not as big as</strong> yours.</div>
+        <div class="ja">私の家はあなたの家ほど大きくない。</div>
+    </div>
+
+    <div class="point-box">
+        not as ... as は比較級で言い換えられます。<br>
+        He is <strong>not as tall as</strong> Tom. = Tom is <strong>taller than</strong> him.
+    </div>
+</div>
+
+<div class="card">
+    <h2>like A better than B / like A the best</h2>
+    <p>好き嫌いの比較には <strong>like ... better</strong>（〜の方が好き）と <strong>like ... the best</strong>（〜が一番好き）を使います。</p>
+
+    <div class="example-box">
+        <div class="en">I <strong>like summer better than</strong> winter.</div>
+        <div class="ja">私は冬より夏の方が好きです。</div>
+    </div>
+    <div class="example-box">
+        <div class="en"><strong>Which</strong> do you <strong>like better</strong>, cats or dogs?</div>
+        <div class="ja">猫と犬、どちらの方が好きですか？</div>
+    </div>
+    <div class="example-box">
+        <div class="en">I <strong>like English the best</strong> of all subjects.</div>
+        <div class="ja">私はすべての教科の中で英語が一番好きです。</div>
+    </div>
+    <div class="example-box">
+        <div class="en"><strong>What</strong> food do you <strong>like the best</strong>?</div>
+        <div class="ja">どの食べ物が一番好きですか？</div>
+    </div>
+
+    <div class="point-box">
+        2つの比較 → <strong>Which do you like better, A or B?</strong><br>
+        3つ以上の比較 → <strong>What/Which ... do you like the best?</strong>
+    </div>
+</div>
+
+<div class="card">
+    <h2>one of the + 最上級 + 複数名詞</h2>
+    <p>「最も〜なもののひとつ」を表す重要表現です。</p>
+
+    <div class="example-box">
+        <div class="en">Tokyo is <strong>one of the biggest cities</strong> in the world.</div>
+        <div class="ja">東京は世界で最も大きい都市のひとつです。</div>
+    </div>
+    <div class="example-box">
+        <div class="en">He is <strong>one of the most famous</strong> singers in Japan.</div>
+        <div class="ja">彼は日本で最も有名な歌手のひとりです。</div>
+    </div>
+
+    <div class="warn-box">
+        ✕ one of the biggest <strong>city</strong>（単数はダメ！）<br>
+        ○ one of the biggest <strong>cities</strong>（必ず複数形！）
+    </div>
+</div>
+
+<div class="card">
+    <h2>比較のまとめ表</h2>
     <table>
         <tr><th>表現</th><th>意味</th><th>例文</th></tr>
-        <tr><td>like A better than B</td><td>BよりAの方が好き</td><td>I like summer better than winter.</td></tr>
-        <tr><td>like A the best</td><td>Aが一番好き</td><td>I like English the best.</td></tr>
-        <tr><td>one of the + 最上級 + 複数名詞</td><td>最も〜なもののひとつ</td><td>Tokyo is one of the biggest cities in the world.</td></tr>
+        <tr><td>as ... as</td><td>〜と同じくらい</td><td>He is as tall as Tom.</td></tr>
+        <tr><td>not as ... as</td><td>〜ほど…ない</td><td>I'm not as tall as him.</td></tr>
+        <tr><td>like A better than B</td><td>BよりAが好き</td><td>I like summer better than winter.</td></tr>
+        <tr><td>like A the best</td><td>Aが一番好き</td><td>I like math the best.</td></tr>
+        <tr><td>one of the + 最上級 + 複数</td><td>最も〜なひとつ</td><td>one of the tallest buildings</td></tr>
     </table>
 </div>
 
@@ -1961,6 +2344,7 @@ lessonContent[22] = `
 
 <div class="card">
     <h2>受動態の形</h2>
+    <p><strong>be動詞 + 過去分詞</strong> で「〜される」を表します。</p>
     <div class="word-order">
         <div class="word-block subject">主語</div>
         <div class="word-block arrow">→</div>
@@ -1971,30 +2355,86 @@ lessonContent[22] = `
 
     <div class="comparison-box">
         <div class="jp-order">
-            <h4>能動態</h4>
+            <h4>能動態（〜する）</h4>
             <p><strong>Tom wrote</strong> this book.</p>
             <p style="color:#718096">トムがこの本を書いた。</p>
         </div>
         <div class="en-order">
-            <h4>受動態</h4>
+            <h4>受動態（〜される）</h4>
             <p>This book <strong>was written</strong> by Tom.</p>
             <p style="color:#718096">この本はトムによって書かれた。</p>
         </div>
     </div>
+
+    <div class="point-box">
+        「誰によって」を言いたいときは <strong>by + 人</strong> をつけます。言わなくてもOKです。
+    </div>
 </div>
 
 <div class="card">
-    <h2>受動態の例文</h2>
+    <h2>受動態の時制</h2>
     <table>
-        <tr><th>英語</th><th>意味</th></tr>
-        <tr><td>English <strong>is spoken</strong> in many countries.</td><td>英語は多くの国で話されている。</td></tr>
-        <tr><td>This temple <strong>was built</strong> in 1300.</td><td>この寺は1300年に建てられた。</td></tr>
-        <tr><td>The window <strong>was broken</strong> by the boy.</td><td>窓はその少年によって割られた。</td></tr>
-        <tr><td>These cars <strong>are made</strong> in Japan.</td><td>これらの車は日本で作られている。</td></tr>
+        <tr><th>時制</th><th>形</th><th>例文</th></tr>
+        <tr><td>現在</td><td>is/am/are + 過去分詞</td><td>English <strong>is spoken</strong> in many countries.</td></tr>
+        <tr><td>過去</td><td>was/were + 過去分詞</td><td>This temple <strong>was built</strong> in 1300.</td></tr>
     </table>
 
-    <div class="point-box">
-        「誰によって」を言いたいときは <strong>by + 人</strong> をつけます。言わなくてもOK。
+    <div class="example-box">
+        <div class="en">These cars <strong>are made</strong> in Japan.</div>
+        <div class="ja">これらの車は日本で作られている。（現在）</div>
+    </div>
+    <div class="example-box">
+        <div class="en">The window <strong>was broken</strong> by the boy.</div>
+        <div class="ja">窓はその少年によって割られた。（過去）</div>
+    </div>
+    <div class="example-box">
+        <div class="en">The cake <strong>was eaten</strong> by the children.</div>
+        <div class="ja">ケーキは子どもたちに食べられた。（過去）</div>
+    </div>
+</div>
+
+<div class="card">
+    <h2>受動態の否定文・疑問文</h2>
+    <p>be動詞の文と同じルールです。</p>
+    <div class="example-box">
+        <div class="en">This book <strong>is not sold</strong> in Japan.</div>
+        <div class="ja">この本は日本では売られていない。（否定）</div>
+    </div>
+    <div class="example-box">
+        <div class="en"><strong>Was</strong> this picture <strong>painted</strong> by Picasso?</div>
+        <div class="ja">この絵はピカソによって描かれましたか？（疑問）</div>
+    </div>
+    <div class="example-box">
+        <div class="en"><strong>Where was</strong> this photo <strong>taken</strong>?</div>
+        <div class="ja">この写真はどこで撮られましたか？（疑問詞つき）</div>
+    </div>
+</div>
+
+<div class="card">
+    <h2>能動態 → 受動態の変換</h2>
+    <p>能動態の目的語が、受動態の主語になります。</p>
+    <div class="example-box">
+        <div class="en">Many people <strong>speak</strong> English.</div>
+        <div class="ja">↓ 受動態に変換</div>
+    </div>
+    <div class="example-box">
+        <div class="en">English <strong>is spoken</strong> by many people.</div>
+        <div class="ja">英語は多くの人々によって話されている。</div>
+    </div>
+
+    <div class="example-box">
+        <div class="en">She <strong>wrote</strong> this letter.</div>
+        <div class="ja">↓ 受動態に変換</div>
+    </div>
+    <div class="example-box">
+        <div class="en">This letter <strong>was written</strong> by her.</div>
+        <div class="ja">この手紙は彼女によって書かれた。</div>
+    </div>
+
+    <div class="warn-box">
+        能動態の主語 → by の後ろ（代名詞は目的格にする）<br>
+        ✕ by <strong>she</strong> → ○ by <strong>her</strong><br>
+        ✕ by <strong>I</strong> → ○ by <strong>me</strong>
     </div>
 </div>
 
@@ -2011,18 +2451,29 @@ lessonContent[23] = `
 
 <div class="card">
     <h2>There is / There are（〜がある・いる）</h2>
+    <p>「〜がある（いる）」は <strong>There is/are + 名詞 + 場所</strong> の形で表します。</p>
     <div class="example-box">
         <div class="en"><strong>There is</strong> a cat on the table.</div>
-        <div class="ja">テーブルの上に猫がいます。（単数）</div>
+        <div class="ja">テーブルの上に猫がいます。（単数 → is）</div>
     </div>
     <div class="example-box">
         <div class="en"><strong>There are</strong> three books on the desk.</div>
-        <div class="ja">机の上に本が3冊あります。（複数）</div>
+        <div class="ja">机の上に本が3冊あります。（複数 → are）</div>
+    </div>
+    <div class="example-box">
+        <div class="en"><strong>There was</strong> a park near my house.</div>
+        <div class="ja">私の家の近くに公園がありました。（過去 → was）</div>
+    </div>
+
+    <div class="point-box">
+        否定文：There <strong>is not (isn't)</strong> a pen on the desk.<br>
+        疑問文：<strong>Is there</strong> a pen on the desk? ─ Yes, there is. / No, there isn't.
     </div>
 </div>
 
 <div class="card">
     <h2>It is ... to ~（〜することは…だ）</h2>
+    <p><strong>It is + 形容詞 + to + 動詞</strong> で「〜することは…だ」を表します。</p>
     <div class="example-box">
         <div class="en"><strong>It is</strong> important <strong>to study</strong> English.</div>
         <div class="ja">英語を勉強することは大切です。</div>
@@ -2031,14 +2482,33 @@ lessonContent[23] = `
         <div class="en"><strong>It is</strong> fun <strong>to play</strong> with friends.</div>
         <div class="ja">友達と遊ぶことは楽しいです。</div>
     </div>
+    <div class="example-box">
+        <div class="en"><strong>It is</strong> easy <strong>to cook</strong> this dish.</div>
+        <div class="ja">この料理を作ることは簡単です。</div>
+    </div>
 
     <div class="point-box">
-        It = 仮の主語。本当の主語は to 以下の部分です。
+        It = 仮の主語。本当の主語は to 以下の部分です。<br>
+        <strong>It is</strong> important <strong>to study</strong> English. = <strong>To study</strong> English is important.
+    </div>
+</div>
+
+<div class="card">
+    <h2>It is ... for 人 to ~（人にとって〜することは…だ）</h2>
+    <p><strong>for + 人</strong> を入れると「誰にとって」かを表せます。</p>
+    <div class="example-box">
+        <div class="en">It is difficult <strong>for me to</strong> understand English.</div>
+        <div class="ja">私にとって英語を理解するのは難しい。</div>
+    </div>
+    <div class="example-box">
+        <div class="en">It is important <strong>for children to</strong> sleep well.</div>
+        <div class="ja">子どもにとってよく寝ることは大切です。</div>
     </div>
 </div>
 
 <div class="card">
     <h2>look / sound / feel + 形容詞</h2>
+    <p>「〜に見える・聞こえる・感じる」を表す動詞です。後ろに<strong>形容詞</strong>が来ます。</p>
     <table>
         <tr><th>表現</th><th>意味</th><th>例文</th></tr>
         <tr><td>look + 形容詞</td><td>〜に見える</td><td>You look happy.</td></tr>
@@ -2047,10 +2517,25 @@ lessonContent[23] = `
         <tr><td>taste + 形容詞</td><td>〜の味がする</td><td>This tastes good.</td></tr>
         <tr><td>smell + 形容詞</td><td>〜の匂いがする</td><td>It smells nice.</td></tr>
     </table>
+
+    <div class="example-box">
+        <div class="en">She <strong>looks</strong> busy today.</div>
+        <div class="ja">彼女は今日忙しそうに見える。</div>
+    </div>
+    <div class="example-box">
+        <div class="en">That <strong>sounds</strong> interesting.</div>
+        <div class="ja">それは面白そうですね。</div>
+    </div>
+
+    <div class="warn-box">
+        ✕ She looks <strong>busily</strong>.（副詞はダメ！）<br>
+        ○ She looks <strong>busy</strong>.（形容詞が正解）
+    </div>
 </div>
 
 <div class="card">
     <h2>too ... to ~（〜すぎて…できない）</h2>
+    <p><strong>too + 形容詞/副詞 + to + 動詞</strong> で「〜すぎて…できない」を表します。</p>
     <div class="example-box">
         <div class="en">I am <strong>too tired to</strong> study.</div>
         <div class="ja">疲れすぎて勉強できない。</div>
@@ -2058,6 +2543,27 @@ lessonContent[23] = `
     <div class="example-box">
         <div class="en">This question is <strong>too difficult to</strong> answer.</div>
         <div class="ja">この問題は難しすぎて答えられない。</div>
+    </div>
+    <div class="example-box">
+        <div class="en">He is <strong>too young to</strong> drive a car.</div>
+        <div class="ja">彼は若すぎて車を運転できない。</div>
+    </div>
+</div>
+
+<div class="card">
+    <h2>tell / ask / want + 人 + to ~</h2>
+    <p>「人に〜するように言う・頼む・してほしい」の表現です。</p>
+    <div class="example-box">
+        <div class="en">She <strong>told me to</strong> wait here.</div>
+        <div class="ja">彼女は私にここで待つように言った。</div>
+    </div>
+    <div class="example-box">
+        <div class="en">He <strong>asked me to</strong> help him.</div>
+        <div class="ja">彼は私に手伝うよう頼んだ。</div>
+    </div>
+    <div class="example-box">
+        <div class="en">I <strong>want you to</strong> come with me.</div>
+        <div class="ja">あなたに一緒に来てほしい。</div>
     </div>
 </div>
 
@@ -2074,6 +2580,7 @@ lessonContent[24] = `
 
 <div class="card">
     <h2>現在完了形の形</h2>
+    <p><strong>have/has + 過去分詞</strong> で、過去の出来事が「今」に関係していることを表します。</p>
     <div class="word-order">
         <div class="word-block subject">主語</div>
         <div class="word-block arrow">→</div>
@@ -2082,23 +2589,62 @@ lessonContent[24] = `
         <div class="word-block complement">過去分詞</div>
     </div>
 
-    <div class="example-box">
-        <div class="en">I <strong>have finished</strong> my homework.</div>
-        <div class="ja">私は宿題を終えたところです。（完了）</div>
-    </div>
-    <div class="example-box">
-        <div class="en">She <strong>has lost</strong> her key.</div>
-        <div class="ja">彼女は鍵をなくしてしまった。（結果：今も見つかっていない）</div>
+    <div class="point-box">
+        主語が <strong>he / she / it</strong>（3人称単数）のときは <strong>has</strong> を使います。<br>
+        それ以外（I / you / we / they）は <strong>have</strong> を使います。
     </div>
 </div>
 
 <div class="card">
-    <h2>完了・結果でよく使う語</h2>
+    <h2>完了（〜したところだ）</h2>
+    <p>動作が<strong>ちょうど完了した</strong>ことを表します。<strong>just</strong>（ちょうど）、<strong>already</strong>（もう）と一緒に使うことが多いです。</p>
+    <div class="example-box">
+        <div class="en">I <strong>have just finished</strong> my homework.</div>
+        <div class="ja">ちょうど宿題を終えたところです。</div>
+    </div>
+    <div class="example-box">
+        <div class="en">She <strong>has already eaten</strong> lunch.</div>
+        <div class="ja">彼女はもう昼食を食べました。</div>
+    </div>
+    <div class="example-box">
+        <div class="en">The train <strong>has just left</strong>.</div>
+        <div class="ja">電車はちょうど出発したところです。</div>
+    </div>
+</div>
+
+<div class="card">
+    <h2>結果（〜してしまった）</h2>
+    <p>過去の動作の<strong>結果が今に残っている</strong>ことを表します。</p>
+    <div class="example-box">
+        <div class="en">She <strong>has lost</strong> her key.</div>
+        <div class="ja">彼女は鍵をなくしてしまった。（→ 今も見つかっていない）</div>
+    </div>
+    <div class="example-box">
+        <div class="en">He <strong>has gone</strong> to America.</div>
+        <div class="ja">彼はアメリカに行ってしまった。（→ 今ここにいない）</div>
+    </div>
+    <div class="example-box">
+        <div class="en">I <strong>have broken</strong> my phone.</div>
+        <div class="ja">スマホを壊してしまった。（→ 今も壊れたまま）</div>
+    </div>
+</div>
+
+<div class="card">
+    <h2>否定文と疑問文</h2>
+    <div class="example-box">
+        <div class="en">I <strong>haven't finished</strong> my homework <strong>yet</strong>.</div>
+        <div class="ja">まだ宿題を終えていません。（否定 + yet）</div>
+    </div>
+    <div class="example-box">
+        <div class="en"><strong>Have</strong> you <strong>finished</strong> your homework <strong>yet</strong>?</div>
+        <div class="ja">もう宿題は終わりましたか？（疑問 + yet）</div>
+    </div>
+
     <table>
-        <tr><th>語句</th><th>意味</th><th>例文</th></tr>
-        <tr><td><strong>just</strong></td><td>ちょうど</td><td>I have <strong>just</strong> arrived.</td></tr>
-        <tr><td><strong>already</strong></td><td>もう・すでに</td><td>I have <strong>already</strong> eaten lunch.</td></tr>
-        <tr><td><strong>yet</strong></td><td>まだ（否定）/ もう（疑問）</td><td>I haven't finished <strong>yet</strong>. / Have you done it <strong>yet</strong>?</td></tr>
+        <tr><th>語句</th><th>意味</th><th>使う場面</th></tr>
+        <tr><td><strong>just</strong></td><td>ちょうど</td><td>肯定文</td></tr>
+        <tr><td><strong>already</strong></td><td>もう・すでに</td><td>肯定文</td></tr>
+        <tr><td><strong>yet</strong></td><td>まだ / もう</td><td>否定文（まだ）・疑問文（もう）</td></tr>
     </table>
 </div>
 
@@ -2113,8 +2659,14 @@ lessonContent[24] = `
         <div class="en-order">
             <h4>現在完了形</h4>
             <p><strong>I have lost my key.</strong></p>
-            <p style="color:#718096">鍵をなくした（今も見つかっていない）</p>
+            <p style="color:#718096">鍵をなくした（→ 今も見つかっていない）</p>
         </div>
+    </div>
+
+    <div class="warn-box">
+        現在完了形では <strong>yesterday, last week, ago</strong> など「過去の一点」を表す語は使えません！<br>
+        ✕ I <strong>have finished</strong> it <strong>yesterday</strong>.<br>
+        ○ I <strong>finished</strong> it <strong>yesterday</strong>.（過去形を使う）
     </div>
 </div>
 
@@ -2285,20 +2837,76 @@ lessonContent[28] = `
 </div>
 
 <div class="card">
-    <h2>whose（〜の）</h2>
+    <h2>whose（〜の）とは？</h2>
     <p><strong>whose</strong> は「〜の」という所有の関係を表す関係代名詞です。人にもものにも使えます。</p>
+    <p>2つの文を whose でつないでみましょう：</p>
 
     <div class="example-box">
-        <div class="en">I know the boy <strong>whose</strong> father is a doctor.</div>
-        <div class="ja">私はお父さんが医者である少年を知っている。</div>
+        <div class="en">I know the boy. + <strong>His</strong> father is a doctor.</div>
+        <div class="ja">↓ His を whose に変えてつなぐ</div>
     </div>
     <div class="example-box">
-        <div class="en">This is the house <strong>whose</strong> roof is red.</div>
-        <div class="ja">これは屋根が赤い家です。</div>
+        <div class="en">I know the boy <strong>whose father</strong> is a doctor.</div>
+        <div class="ja">私はお父さんが医者である少年を知っている。</div>
     </div>
 
     <div class="point-box">
-        whose の後ろには<strong>必ず名詞</strong>が来ます。whose + 名詞 で「〜の（名詞）」という意味になります。
+        whose の後ろには<strong>必ず名詞</strong>が来ます。whose + 名詞 で「〜の（名詞）」という意味になります。<br>
+        his → whose / her → whose / its → whose（すべて whose に変わる）
+    </div>
+</div>
+
+<div class="card">
+    <h2>whose の例文（人について）</h2>
+    <div class="example-box">
+        <div class="en">She is the teacher <strong>whose class</strong> is very popular.</div>
+        <div class="ja">彼女は授業がとても人気のある先生です。</div>
+    </div>
+    <div class="example-box">
+        <div class="en">The man <strong>whose car</strong> was stolen called the police.</div>
+        <div class="ja">車が盗まれた男性は警察に電話した。</div>
+    </div>
+    <div class="example-box">
+        <div class="en">I met a girl <strong>whose sister</strong> is a famous singer.</div>
+        <div class="ja">私はお姉さんが有名な歌手である女の子に会った。</div>
+    </div>
+</div>
+
+<div class="card">
+    <h2>whose の例文（ものについて）</h2>
+    <p>whose は人だけでなく、<strong>ものや動物</strong>にも使えます。</p>
+    <div class="example-box">
+        <div class="en">This is the house <strong>whose roof</strong> is red.</div>
+        <div class="ja">これは屋根が赤い家です。</div>
+    </div>
+    <div class="example-box">
+        <div class="en">I found a book <strong>whose cover</strong> was torn.</div>
+        <div class="ja">表紙が破れた本を見つけた。</div>
+    </div>
+    <div class="example-box">
+        <div class="en">The dog <strong>whose tail</strong> is short is mine.</div>
+        <div class="ja">しっぽが短い犬は私のです。</div>
+    </div>
+</div>
+
+<div class="card">
+    <h2>whose と who/which の見分け方</h2>
+    <div class="comparison-box">
+        <div class="jp-order">
+            <h4>who（主格）</h4>
+            <p><strong>The boy who is running</strong> is Tom.</p>
+            <p style="color:#718096">走っている少年はトムです。<br>→ 後ろが動詞（is running）</p>
+        </div>
+        <div class="en-order">
+            <h4>whose（所有格）</h4>
+            <p><strong>The boy whose dog is big</strong> is Tom.</p>
+            <p style="color:#718096">犬が大きい少年はトムです。<br>→ 後ろが名詞（dog）</p>
+        </div>
+    </div>
+
+    <div class="warn-box">
+        ✕ The boy <strong>who dog</strong> is big is Tom.（who の後に名詞は来ない！）<br>
+        ○ The boy <strong>whose dog</strong> is big is Tom.（whose + 名詞が正解）
     </div>
 </div>
 
@@ -2310,6 +2918,12 @@ lessonContent[28] = `
         <tr><td>目的格（〜を）</td><td>who(m)</td><td>which</td><td>that（省略可）</td></tr>
         <tr><td>所有格（〜の）</td><td colspan="3">whose</td></tr>
     </table>
+
+    <div class="point-box">
+        主格 → 後ろに<strong>動詞</strong>が来る（who lives, which is ...）<br>
+        目的格 → 後ろに<strong>主語+動詞</strong>が来る（which I bought, that she likes）<br>
+        所有格 → 後ろに<strong>名詞</strong>が来る（whose father, whose name）
+    </div>
 </div>
 
 <div class="card" id="exercises-28"></div>
