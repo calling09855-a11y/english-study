@@ -3998,12 +3998,17 @@ function showLesson(key) {
         var lessonId = parseInt(key.split('-')[1]);
         injectRandomExercises(lessonId);
 
-        // 単語帳ボタンをコンテンツ先頭に挿入
+        // 単語帳ボタンをlesson-header内に追加
         var vocabBtn = document.createElement('button');
         vocabBtn.className = 'vocab-btn';
         vocabBtn.innerHTML = '📖 単語帳';
         vocabBtn.onclick = function() { renderVocabModal(lessonId); };
-        contentEl.insertBefore(vocabBtn, contentEl.firstChild);
+        var headerEl = contentEl.querySelector('.lesson-header');
+        if (headerEl) {
+            headerEl.appendChild(vocabBtn);
+        } else {
+            contentEl.insertBefore(vocabBtn, contentEl.firstChild);
+        }
     }
 
     // 音声ボタン自動挿入

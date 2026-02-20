@@ -493,17 +493,17 @@ footer {
     display: inline-flex;
     align-items: center;
     gap: 6px;
-    margin: 12px 0 4px;
-    padding: 8px 18px;
-    background: linear-gradient(135deg, #667eea, #764ba2);
+    margin-top: 14px;
+    padding: 7px 16px;
+    background: rgba(255, 255, 255, 0.25);
     color: #fff;
-    border: none;
+    border: 2px solid rgba(255, 255, 255, 0.6);
     border-radius: 20px;
-    font-size: 0.9rem;
+    font-size: 0.85rem;
     cursor: pointer;
-    transition: opacity .2s;
+    transition: background .2s;
 }
-.vocab-btn:hover { opacity: .85; }
+.vocab-btn:hover { background: rgba(255, 255, 255, 0.4); }
 
 @media (max-width: 768px) {
     header h1 { font-size: 1.4rem; }
