@@ -3967,8 +3967,10 @@ function showLesson(key) {
 
     if (key.startsWith('lesson-')) {
         var id = parseInt(key.split('-')[1]);
+        var vocabBtnHtml = '<button class="vocab-btn" onclick="renderVocabModal(' + id + ')">📖 単語帳</button>';
         if (lessonContent[id]) {
-            contentEl.innerHTML = lessonContent[id] + buildLessonNav(key);
+            var html = lessonContent[id].replace('</div>', vocabBtnHtml + '</div>');
+            contentEl.innerHTML = html + buildLessonNav(key);
         } else {
             var found = lessonStructure.find(function(i) { return i.type === 'lesson' && i.id === id; });
             var title = found ? found.title : '';
@@ -3998,17 +4000,6 @@ function showLesson(key) {
         var lessonId = parseInt(key.split('-')[1]);
         injectRandomExercises(lessonId);
 
-        // 単語帳ボタンをlesson-header内に追加
-        var vocabBtn = document.createElement('button');
-        vocabBtn.className = 'vocab-btn';
-        vocabBtn.innerHTML = '📖 単語帳';
-        vocabBtn.onclick = function() { renderVocabModal(lessonId); };
-        var headerEl = contentEl.querySelector('.lesson-header');
-        if (headerEl) {
-            headerEl.appendChild(vocabBtn);
-        } else {
-            contentEl.insertBefore(vocabBtn, contentEl.firstChild);
-        }
     }
 
     // 音声ボタン自動挿入
